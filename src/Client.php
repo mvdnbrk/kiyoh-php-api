@@ -6,6 +6,7 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Composer\CaBundle\CaBundle;
 use GuzzleHttp\Client as HttpClient;
+use GuzzleHttp\Exception\GuzzleException;
 use Mvdnbrk\Kiyoh\Exceptions\KiyohException;
 
 class Client
