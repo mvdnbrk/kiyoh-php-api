@@ -18,8 +18,12 @@ composer require mvdnbrk/kiyoh-php-api
 
 ## Usage
 
+Initialize the KiyOh client and set your API key and company ID.
+
 ``` php
-new Mvdnbrk\Kiyoh();
+$kiyoh = new \Mvdnbrk\Kiyoh\Client();
+$kiyoh->setApiKey('your-connector-code');
+$kiyoh->setCompanyId('1234');
 ```
 
 ### Testing
