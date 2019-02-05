@@ -21,8 +21,8 @@ abstract class TestCase extends BaseTestCase
         }
 
         $this->client = new Client();
-        $this->client->setApiKey(getenv('API_KEY'));
-        $this->client->setCompanyId(getenv('COMPANY_ID'));
+        $this->client->setCompanyId(getenv('KIYOH_ID'));
+        $this->client->setApiKey(getenv('KIYOH_SECRET'));
 
         parent::setUp();
     }
