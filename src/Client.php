@@ -111,21 +111,25 @@ class Client
      * Sets the API key.
      *
      * @param  string  $value
-     * @return void
+     * @return \Mvdnbrk\Kiyoh\Client
      */
     public function setApiKey($value)
     {
         $this->apiKey = trim($value);
+
+        return $this;
     }
 
     /**
      * Sets the Company ID.
      *
      * @param  int  $value
-     * @return void
+     * @return \Mvdnbrk\Kiyoh\Client
      */
     public function setCompanyId($value)
     {
         $this->companyId = trim($value);
+
+        return $this;
     }
 }
