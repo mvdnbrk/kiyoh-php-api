@@ -74,7 +74,7 @@ class Client
     }
 
     /**
-     * Performs a HTTP call to the API endpoint
+     * Performs a HTTP call to the API endpoint.
      *
      * @param  array  $filters
      * @return \Psr\Http\Message\ResponseInterface
