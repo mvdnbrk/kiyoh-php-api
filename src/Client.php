@@ -95,7 +95,7 @@ class Client
         ));
 
         try {
-            $response = $this->httpClient->send($request, ['http_errors' => false]);
+            $response = $this->httpClient->send($request);
         } catch (GuzzleException $e) {
             throw new KiyohException($e->getMessage(), $e->getCode());
         }
