@@ -90,12 +90,9 @@ class Client
             throw new KiyohException('You have not set a company ID. Please use setCompanyId() to set the company ID.');
         }
 
-        $request = new Request(
-            'GET',
-            $this->apiEndpoint.$this->buildQueryString(
-                $this->getFilters($filters)
-            )
-        );
+        $request = new Request('GET', $this->apiEndpoint.$this->buildQueryString(
+            $this->getFilters($filters)
+        ));
 
         try {
             $response = $this->httpClient->send($request, ['http_errors' => false]);
