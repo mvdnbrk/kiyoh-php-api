@@ -22,17 +22,18 @@ Initialize the KiyOh client and set your API key and company ID.
 
 ``` php
 $kiyoh = new \Mvdnbrk\Kiyoh\Client();
+
 $kiyoh->setApiKey('your-connector-code');
 $kiyoh->setCompanyId('1234');
 ```
 
-### Testing
+## Testing
 
 ``` bash
 composer test
 ```
 
-### Changelog
+## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
@@ -40,7 +41,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-### Security
+## Security
 
 If you discover any security related issues, please email mvdnbrk@gmail.com instead of using the issue tracker.
 
