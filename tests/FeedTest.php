@@ -15,7 +15,7 @@ class FeedTest extends TestCase
     /** @test */
     public function it_has_a_default_limit_of_ten()
     {
-        $this->assertSame(10, $this->client->feed->limit);
+        $this->assertSame(10, $this->client->feed->getLimit());
     }
 
     /** @test */
@@ -23,7 +23,8 @@ class FeedTest extends TestCase
     {
         $this->client->feed->limit(999);
 
-        $this->assertSame(999, $this->client->feed->limit);
+        $this->assertSame(999, $this->client->feed->getLimit());
+    }
     }
 
     /** @test */
