@@ -7,12 +7,6 @@ use Mvdnbrk\Kiyoh\Feed;
 class FeedTest extends TestCase
 {
     /** @test */
-    public function client_has_a_feed()
-    {
-        $this->assertInstanceOf(Feed::class, $this->client->feed);
-    }
-
-    /** @test */
     public function it_has_a_default_limit_of_ten()
     {
         $this->assertSame(10, $this->client->feed->getLimit());
