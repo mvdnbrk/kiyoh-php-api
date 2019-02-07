@@ -24,6 +24,12 @@ class Feed
      */
     public $company;
 
+
+    /**
+     * @var \Tightenco\Collect\Support\Collection
+     */
+    public $reviews;
+
     /**
      * Create a new Feed instance.
      *
@@ -36,6 +42,7 @@ class Feed
         $this->limit = 10;
 
         $this->company = new Company();
+        $this->reviews = collect();
     }
 
     /**

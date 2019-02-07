@@ -3,9 +3,16 @@
 namespace Mvdnbrk\Kiyoh\Tests;
 
 use Mvdnbrk\Kiyoh\Feed;
+use Tightenco\Collect\Support\Collection;
 
 class FeedTest extends TestCase
 {
+    /** @test */
+    public function it_has_a_collection_of_reviews()
+    {
+        $this->assertInstanceOf(Collection::class, $this->client->feed->reviews);
+    }
+
     /** @test */
     public function it_has_a_default_limit_of_ten()
     {
