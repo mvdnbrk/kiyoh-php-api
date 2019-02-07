@@ -2,7 +2,7 @@
 
 namespace Mvdnbrk\Kiyoh\Tests;
 
-use Mvdnbrk\Kiyoh\Client;
+use Mvdnbrk\Kiyoh\Feed;
 use Psr\Http\Message\ResponseInterface;
 use Mvdnbrk\Kiyoh\Exceptions\KiyohException;
 
