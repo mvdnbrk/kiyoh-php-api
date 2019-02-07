@@ -25,6 +25,29 @@ class FeedTest extends TestCase
 
         $this->assertSame(999, $this->client->feed->getLimit());
     }
+
+    /** @test */
+    public function it_can_set_the_limit_to_all()
+    {
+        $this->client->feed->all();
+
+        $this->assertSame('all', $this->client->feed->getLimit());
+    }
+
+    /** @test */
+    public function setting_a_negative_limit_has_no_affect()
+    {
+        $this->client->feed->limit(-1);
+
+        $this->assertSame(10, $this->client->feed->getLimit());
+    }
+
+    /** @test */
+    public function setting_an_invalid_limit_has_no_effect()
+    {
+        $this->client->feed->limit('invalid-value');
+
+        $this->assertSame(10, $this->client->feed->getLimit());
     }
 
     /** @test */
