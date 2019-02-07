@@ -43,7 +43,7 @@ class CompanyTest extends TestCase
     /** @test */
     public function it_can_get_the_aggregate_rating()
     {
-         $company = new Company([
+        $company = new Company([
             'aggregate_rating' => '9.8',
         ]);
 
@@ -53,7 +53,7 @@ class CompanyTest extends TestCase
     /** @test */
     public function it_can_get_the_review_count()
     {
-         $company = new Company([
+        $company = new Company([
             'review_count' => '123456',
         ]);
 
@@ -63,7 +63,7 @@ class CompanyTest extends TestCase
     /** @test */
     public function it_can_get_the_view_count()
     {
-         $company = new Company([
+        $company = new Company([
             'view_count' => '123456',
         ]);
 
