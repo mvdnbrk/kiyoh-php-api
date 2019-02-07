@@ -50,6 +50,8 @@ class Feed
             'showextraquestions' => 0,
         ]);
 
+        $this->company->fill($response['company']);
+
         return $this;
     }
 
