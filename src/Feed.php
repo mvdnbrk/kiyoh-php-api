@@ -13,16 +13,16 @@ class Feed
     protected $apiClient;
 
     /**
+     * The maximum number of reviews to fetch.
+     *
+     * @var int|string
+     */
+    protected $limit;
+
+    /**
      * @var \Mvdnbrk\Kiyoh\Resources\Company;
      */
     public $company;
-
-    /**
-     * The maximum number of reviews to fetch.
-     *
-     * @var int
-     */
-    public $limit;
 
     /**
      * Create a new Feed instance.
