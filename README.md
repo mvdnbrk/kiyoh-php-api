@@ -32,7 +32,7 @@ $client->setCompanyId('1234');
 $feed = $client->feed->get();
 ```
 
-By default this will retrieve the 10 most recent reviews.
+By default this will retrieve the 10 most recent reviews.  
 You may change the number of reviews to retrieve by using the `limit()` method:
 
 ```php
