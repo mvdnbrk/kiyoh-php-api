@@ -66,6 +66,18 @@ class Feed
     }
 
     /**
+     * Sets the limit to "all".
+     *
+     * @return $this
+     */
+    public function all()
+    {
+        $this->limit = 'all';
+
+        return $this;
+    }
+
+    /**
      * Set the maximum number of reviews to fetch.
      *
      * @param  int  $value
