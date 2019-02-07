@@ -39,4 +39,14 @@ class CompanyTest extends TestCase
         $company->total_score = 10.0;
         $this->assertSame(10.0, $company->aggregate_rating);
     }
+
+    /** @test */
+    public function it_can_get_the_review_count()
+    {
+         $company = new Company([
+            'review_count' => '123456',
+        ]);
+
+        $this->assertSame(123456, $company->reviewCount);
+    }
 }

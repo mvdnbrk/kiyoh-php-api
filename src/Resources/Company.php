@@ -30,6 +30,16 @@ class Company extends BaseResource
     public $views;
 
     /**
+     * Get the review count attribute,
+     *
+     * @return intt
+     */
+    public function getReviewCountAttribute()
+    {
+        return (int) $this->review_count;
+    }
+
+    /**
      * Sets aggregate rating for this company.
      *
      * @param  float|string  $value
