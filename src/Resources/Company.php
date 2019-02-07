@@ -15,22 +15,83 @@ class Company extends BaseResource
     public $url;
 
     /**
-     * @var array
-     */
-    public $reviews;
-
-    /**
-     * @var int
-     */
-    public $totalViews;
-
-    /**
-     * @var int
-     */
-    public $totalReviews;
-
-    /**
      * @var float
      */
-    public $totalScore;
+    public $aggregate_rating;
+
+    /**
+     * @va rint
+     */
+    public $review_count;
+
+    /**
+     * @var int
+     */
+    public $views;
+
+    /**
+     * Sets aggregate rating for this company.
+     *
+     * @param  float|string  $value
+     * @return  void
+     */
+    public function setAggregateRatingAttribute($value)
+    {
+        $this->aggregate_rating = (float) $value;
+    }
+
+    /**
+     * Sets total review count for this company.
+     *
+     * @param  int|string  $value
+     * @return  void
+     */
+    public function setReviewCountAttribute($value)
+    {
+        $this->review_count = (int) $value;
+    }
+
+    /**
+     * Alias for setReviewCountAttribute().
+     *
+     * @param  int|string  $value
+     * @return  void
+     */
+    public function setTotalReviewsAttribute($value)
+    {
+        $this->setReviewCountAttribute($value);
+    }
+
+    /**
+     * Alias for setAggregateRatingAttribute().
+     *
+     * @param  float|string  $value
+     * @return  void
+     */
+    public function setTotalScoreAttribute($value)
+    {
+        $this->setAggregateRatingAttribute($value);
+    }
+
+    /**
+     * Sets the views for this company.
+     *
+     * @param  int|string  $value
+     * @return  void
+     */
+    public function setViewsAttribute($value)
+    {
+        $this->views = (int) $value;
+    }
+
+    /**
+     * Alias for setViewsAttribute().
+     *
+     * @param  int|string  $value
+     * @return  void
+     */
+    public function setTotalViewsAttribute($value)
+    {
+        $this->setViewsAttribute($value);
+    }
 }
