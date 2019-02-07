@@ -47,7 +47,7 @@ $feed = $kiyoh->feed->all()->get();
 
 ### Company statistics
 ```php
-$feed->company->views;
+$feed->company->viewCount;
 $feed->company->reviewCount;
 $feed->company->aggregateRating;
 ```

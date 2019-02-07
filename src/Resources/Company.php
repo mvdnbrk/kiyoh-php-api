@@ -27,7 +27,7 @@ class Company extends BaseResource
     /**
      * @var int
      */
-    public $views;
+    public $view_count;
 
     /**
      * Get the aggregate rating attribute,
@@ -47,6 +47,16 @@ class Company extends BaseResource
     public function getReviewCountAttribute()
     {
         return (int) $this->review_count;
+    }
+
+    /**
+     * Get the view count attribute,
+     *
+     * @return intt
+     */
+    public function getViewCountAttribute()
+    {
+        return (int) $this->view_count;
     }
 
     /**
@@ -99,9 +109,9 @@ class Company extends BaseResource
      * @param  int|string  $value
      * @return  void
      */
-    public function setViewsAttribute($value)
+    public function setViewCountAttribute($value)
     {
-        $this->views = (int) $value;
+        $this->view_count = (int) $value;
     }
 
     /**
@@ -112,6 +122,6 @@ class Company extends BaseResource
      */
     public function setTotalViewsAttribute($value)
     {
-        $this->setViewsAttribute($value);
+        $this->setViewCountAttribute($value);
     }
 }
