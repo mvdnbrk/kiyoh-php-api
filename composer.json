@@ -2,6 +2,8 @@
     "name": "mvdnbrk/kiyoh-php-api",
     "description": "KiyOh API client for PHP",
     "keywords": [
+        "php",
+        "api",
         "kiyoh",
         "reviews"
     ],
