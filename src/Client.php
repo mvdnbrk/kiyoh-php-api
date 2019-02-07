@@ -37,6 +37,11 @@ class Client
     protected $httpClient;
 
     /**
+     * @var \Mvdnbrk\Kiyoh\Feed
+     */
+    public $feed;
+
+    /**
      * Create a new Client instance.
      */
     public function __construct()
@@ -44,6 +49,8 @@ class Client
         $this->httpClient = new HttpClient([
             RequestOptions::VERIFY => CaBundle::getBundledCaBundlePath()
         ]);
+
+        $this->feed = new Feed($this);
     }
 
     /**
