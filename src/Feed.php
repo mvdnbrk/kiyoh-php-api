@@ -12,6 +12,9 @@ class Feed
      */
     protected $apiClient;
 
+    /**
+     * @var \Mvdnbrk\Kiyoh\Resources\Company;
+     */
     public $company;
 
 
