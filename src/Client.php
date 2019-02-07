@@ -42,7 +42,7 @@ class Client
     public function __construct()
     {
         $this->httpClient = new HttpClient([
-            RequestOptions::VERIFY => CaBundle::getSystemCaRootBundlePath()
+            RequestOptions::VERIFY => CaBundle::getBundledCaBundlePath()
         ]);
     }
 
