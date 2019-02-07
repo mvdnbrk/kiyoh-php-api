@@ -17,7 +17,6 @@ class Feed
      */
     public $company;
 
-
     /**
      * The maximum number of reviews to fetch.
      *
