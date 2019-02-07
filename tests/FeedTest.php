@@ -19,10 +19,18 @@ class FeedTest extends TestCase
     }
 
     /** @test */
-    public function can_set_the_limit()
+    public function it_can_set_the_limit()
     {
         $this->client->feed->limit(999);
 
         $this->assertSame(999, $this->client->feed->limit);
+    }
+
+    /** @test */
+    public function it_can_get_the_feed()
+    {
+        $feed = $this->client->feed->get();
+
+        $this->assertInstanceOf(Feed::class, $feed);
     }
 }
