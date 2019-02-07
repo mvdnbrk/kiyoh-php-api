@@ -111,7 +111,6 @@ class Client
             throw new KiyohException('No API response received.');
         }
 
-        return $response;
         return $this->parseResponse($response);
     }
 
