@@ -41,6 +41,16 @@ class CompanyTest extends TestCase
     }
 
     /** @test */
+    public function it_can_get_the_aggregate_rating()
+    {
+         $company = new Company([
+            'aggregate_rating' => '9.8',
+        ]);
+
+        $this->assertSame(9.8, $company->aggregateRating);
+    }
+
+    /** @test */
     public function it_can_get_the_review_count()
     {
          $company = new Company([
