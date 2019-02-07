@@ -84,7 +84,7 @@ class Client
      * Performs a HTTP call to the API endpoint.
      *
      * @param  array  $filters
-     * @return \Psr\Http\Message\ResponseInterface
+     * @return object
      * @throws \Mvdnbrk\Kiyoh\Exceptions\KiyohException
      */
     public function performHttpCall($filters = [])
@@ -112,6 +112,32 @@ class Client
         }
 
         return $response;
+        return $this->parseResponse($response);
+    }
+
+    /**
+     * Parse the PSR-7 Response body.
+     *
+     * @param  \Psr\Http\Message\ResponseInterface  $response
+     * @return object
+     */
+    public function parseResponse($response)
+    {
+        $body = $response->getBody()->getContents();
+
+        $simplexml = simplexml_load_string($body);
+
+        if ($simplexml === false) {
+            throw new KiyohException("XML parse error: '{$body}'.");
+        }
+
+        $object = @json_decode(@json_encode($simplexml), true);
+
+        if (json_last_error() != JSON_ERROR_NONE) {
+            throw new KiyohException("Unable to decode response: '{$body}'.");
+        }
+
+        return $object;
     }
 
     /**
