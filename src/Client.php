@@ -72,12 +72,10 @@ class Client
      */
     protected function getFilters($filters)
     {
-        return array_merge([
+        return array_merge($filters, [
             'connectorcode' => $this->apiKey,
             'company_id' => $this->companyId,
-            'reviewcount' => 1,
-            'showextraquestions' => 0,
-        ], $filters);
+        ]);
     }
 
     /**
