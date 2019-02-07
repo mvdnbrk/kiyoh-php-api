@@ -9,7 +9,7 @@ class FeedTest extends TestCase
     /** @test */
     public function client_has_a_feed()
     {
-        $this->assertInstanceOf(Feed::class,  $this->client->feed);
+        $this->assertInstanceOf(Feed::class, $this->client->feed);
     }
 
     /** @test */
