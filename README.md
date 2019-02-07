@@ -45,8 +45,11 @@ If you would like to retrieve all reviews you may use the `all()` method:
 $feed = $kiyoh->feed->all()->get();
 ```
 
-### Company statistics
+### Company properties and statistics
 ```php
+$feed->company->url;
+$feed->company->name;
+
 $feed->company->viewCount;
 $feed->company->reviewCount;
 $feed->company->aggregateRating;
