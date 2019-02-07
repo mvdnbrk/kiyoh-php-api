@@ -16,17 +16,35 @@ You can install the package via composer:
 composer require mvdnbrk/kiyoh-php-api
 ```
 
-## Usage
+## Get started
 
-Initialize the KiyOh client and set your API key and company ID.
+Initialize the KiyOh client and set your API key and company ID:
 
 ``` php
-$kiyoh = new \Mvdnbrk\Kiyoh\Client();
+$client = new \Mvdnbrk\Kiyoh\Client();
 
-$kiyoh->setApiKey('your-connector-code');
-$kiyoh->setCompanyId('1234');
+$client->setApiKey('your-connector-code');
+$client->setCompanyId('1234');
 ```
 
+### Retrieve the KiyOh feed
+```php
+$feed = $client->feed->get();
+```
+
+By default this will retrieve the 10 most recent reviews.
+You may change the number of reviews to retrieve by using the `limit()` method:
+
+```php
+$feed = $kiyoh->feed->limit(25)->get();
+```
+
+### Company statistics
+```php
+$feed->company->views;
+$feed->company->reviewCount;
+$feed->company->aggregateRating;
+```
 ## Testing
 
 ``` bash
