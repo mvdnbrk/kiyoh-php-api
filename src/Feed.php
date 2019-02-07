@@ -46,13 +46,23 @@ class Feed
     public function get()
     {
         $response = $this->apiClient->performHttpCall([
-            'reviewcount' => $this->limit,
+            'reviewcount' => $this->getLimit(),
             'showextraquestions' => 0,
         ]);
 
         $this->company->fill($response['company']);
 
         return $this;
+    }
+
+    /**
+     * Get the maximum numbers of reviews.
+     *
+     * @return int|string
+     */
+    public function getLimit()
+    {
+        return $this->limit;
     }
 
     /**
