@@ -39,6 +39,12 @@ You may change the number of reviews to retrieve by using the `limit()` method:
 $feed = $kiyoh->feed->limit(25)->get();
 ```
 
+If you would like to retrieve all reviews you may use the `all()` method:
+
+```php
+$feed = $kiyoh->feed->all()->get();
+```
+
 ### Company statistics
 ```php
 $feed->company->views;
