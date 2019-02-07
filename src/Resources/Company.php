@@ -20,7 +20,7 @@ class Company extends BaseResource
     public $aggregate_rating;
 
     /**
-     * @va rint
+     * @va int
      */
     public $review_count;
 
