@@ -16,7 +16,7 @@ You can install the package via composer:
 composer require mvdnbrk/kiyoh-php-api
 ```
 
-## Get started
+## Getting started
 
 Initialize the KiyOh client and set your API key and company ID:
 
