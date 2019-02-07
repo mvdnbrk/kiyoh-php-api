@@ -85,7 +85,7 @@ class Feed
      */
     public function limit($value)
     {
-        if ($value >= 0) {
+        if (is_int($value) && $value >= 0) {
             $this->limit = $value;
         }
 
