@@ -35,12 +35,12 @@ class Review extends BaseResource
     public $created_at;
 
     /**
-     * @var array
+     * @var mixed
      */
     public $meta;
 
     /**
-     * Set the id of this resource.
+     * Set the id for this review.
      *
      * @param  int|string  $value
      * @return void
