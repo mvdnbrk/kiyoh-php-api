@@ -42,7 +42,7 @@ class Company extends BaseResource
     /**
      * Get the review count attribute,
      *
-     * @return intt
+     * @return int
      */
     public function getReviewCountAttribute()
     {
