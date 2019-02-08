@@ -55,6 +55,7 @@ $feed->reviews->each(function ($review) {
 
     $review->hasPositiveComment();
     $review->positiveComment;
+    $review->hasNegativeComment();
     $review->negativeComment;
 
     $review->createdAt;
