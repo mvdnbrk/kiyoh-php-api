@@ -31,9 +31,15 @@ class ReviewTest extends TestCase
         $this->assertSame(1, $review->id);
         $this->assertSame(10, $review->rating);
         $this->assertTrue($review->recommendation);
+
         $this->assertEquals('Positive comment', $review->comment_positive);
         $this->assertEquals('Negative comment', $review->comment_negative);
+        $this->assertEquals('Positive comment', $review->positive);
+        $this->assertEquals('Negative comment', $review->negative);
+
         $this->assertEquals('2019-02-01 12:34:56', $review->created_at);
+        $this->assertEquals('2019-02-01 12:34:56', $review->createdAt);
+
         $this->assertEquals(['reference' => 'some-value', 'foo' => 'bar'], $review->meta);
         $this->assertEquals('Some response', $review->response);
 
