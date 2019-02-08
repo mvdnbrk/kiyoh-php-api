@@ -65,6 +65,16 @@ class Review extends BaseResource
     }
 
     /**
+     * Get created at date for this review.,
+     *
+     * @return string
+     */
+    public function getCreatedAtAttribute()
+    {
+        return $this->created_at;
+    }
+
+    /**
      * Determine if the review has a response from the company.
      *
      * @return bool
