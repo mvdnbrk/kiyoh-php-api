@@ -3,6 +3,7 @@
 namespace Mvdnbrk\Kiyoh;
 
 use Mvdnbrk\Kiyoh\Client;
+use Mvdnbrk\Kiyoh\Resources\Review;
 use Mvdnbrk\Kiyoh\Resources\Company;
 
 class Feed
@@ -58,6 +59,15 @@ class Feed
         ]);
 
         $this->company->fill($response['company']);
+
+        collect($response['review_list']['review'])->each(function ($review) {
+            $this->reviews->push(new Review(
+                collect($review)
+                    ->put('created_at', $review['customer']['date'] ?? null)
+                    ->filter()
+                    ->all()
+            ));
+        });
 
         return $this;
     }
