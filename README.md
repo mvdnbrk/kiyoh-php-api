@@ -53,8 +53,8 @@ $feed->reviews->each(function ($review) {
     $review->rating;
     $review->recommendation;
 
-    $review->commentPositive;
-    $review->commentNegative;
+    $review->positiveComment;
+    $review->negativeComment;
 
     $review->createdAt;
 
