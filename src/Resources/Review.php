@@ -10,6 +10,11 @@ class Review extends BaseResource
     public $id;
 
     /**
+     * @var \Mvdnbrk\Kiyoh\Resources;
+     */
+    public $author;
+
+    /**
      * @var string
      */
     public $comment_negative;
@@ -38,6 +43,21 @@ class Review extends BaseResource
      * @var mixed
      */
     public $meta;
+
+    /**
+     * Create a new Review instance.
+     *
+     * @param  array  $attributes
+     */
+    public function __construct($attributes = [])
+    {
+        parent::__construct($attributes);
+
+        $this->author = new Author(array_merge(
+            $attributes['author'] ?? [],
+            $attributes['customer'] ?? []
+        ));
+    }
 
     /**
      * Set the id for this review.
