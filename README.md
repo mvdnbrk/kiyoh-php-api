@@ -45,6 +45,32 @@ If you would like to retrieve all reviews you may use the `all()` method:
 $feed = $kiyoh->feed->all()->get();
 ```
 
+### Reviews
+
+```php
+$feed->reviews->each(function ($review) {
+
+    $review->rating;
+    $review->recommendation;
+
+    $review->commentPositive;
+    $review->commentNegative;
+
+    $review->createdAt;
+
+    // author
+    $review->author->name;
+    $review->author->locality;
+
+    // response
+    $review->hasResponse();
+    $review->response;
+
+    // array of "extra options"
+    $review->meta;
+});
+```
+
 ### Company properties and statistics
 ```php
 $feed->company->url;
