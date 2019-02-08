@@ -79,7 +79,7 @@ class Review extends BaseResource
      *
      * @return string
      */
-    public function getCommentNegativeAttribute()
+    public function getNegativeCommentAttribute()
     {
         return $this->comment_negative;
     }
