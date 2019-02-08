@@ -68,7 +68,7 @@ $feed->reviews->each(function ($review) {
 
     // array of "extra options"
     $review->meta;
-    
+
 });
 ```
 
