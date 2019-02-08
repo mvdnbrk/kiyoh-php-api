@@ -4,6 +4,8 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+## [v1.1.0] - 2019-02-08
+
 ### Added
 - Added `hasPositiveComment()`. [`78f8bcc`](https://github.com/mvdnbrk/kiyoh-php-api/commit/78f8bcca350b2a7d08a651dc2d568c496b792317) 
 - Added `hasNegativeComment()`. [`5f8b77e`](https://github.com/mvdnbrk/kiyoh-php-api/commit/5f8b77eafd51a10d1ae8ba06cd3f6900fb1c80b8) 
@@ -16,4 +18,5 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ### Initial realease
 
-[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.0...HEAD
+[v1.1.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.0.0...v1.1.0
