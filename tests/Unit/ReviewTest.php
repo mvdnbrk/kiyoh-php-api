@@ -34,8 +34,8 @@ class ReviewTest extends TestCase
 
         $this->assertEquals('Positive comment', $review->comment_positive);
         $this->assertEquals('Negative comment', $review->comment_negative);
-        $this->assertEquals('Positive comment', $review->positive);
-        $this->assertEquals('Negative comment', $review->negative);
+        $this->assertEquals('Positive comment', $review->commentPositive);
+        $this->assertEquals('Negative comment', $review->commentNegative);
 
         $this->assertEquals('2019-02-01 12:34:56', $review->created_at);
         $this->assertEquals('2019-02-01 12:34:56', $review->createdAt);
