@@ -60,7 +60,7 @@ class ReviewTest extends TestCase
     }
 
     /** @test */
-    public function it_can_determine_if_it_has_positive_comment()
+    public function it_can_determine_if_it_has_a_positive_comment()
     {
         $review = new Review();
 
