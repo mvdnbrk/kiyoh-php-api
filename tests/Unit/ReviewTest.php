@@ -58,4 +58,16 @@ class ReviewTest extends TestCase
 
         $this->assertTrue($review->hasResponse());
     }
+
+    /** @test */
+    public function it_can_determine_if_it_has_positive_comment()
+    {
+        $review = new Review();
+
+        $this->assertFalse($review->hasPositiveComment());
+
+        $review->comment_positive = 'Some positive comment';
+
+        $this->assertTrue($review->hasPositiveComment());
+    }
 }

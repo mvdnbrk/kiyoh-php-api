@@ -105,6 +105,16 @@ class Review extends BaseResource
     }
 
     /**
+     * Determine if the review has a positive comment.
+     *
+     * @return bool
+     */
+    public function hasPositiveComment()
+    {
+        return ! empty($this->comment_positive);
+    }
+
+    /**
      * Set the id for this review.
      *
      * @param  int|string  $value

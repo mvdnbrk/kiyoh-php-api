@@ -53,6 +53,7 @@ $feed->reviews->each(function ($review) {
     $review->rating;
     $review->recommendation;
 
+    $review->hasPositiveComment();
     $review->positiveComment;
     $review->negativeComment;
 
