@@ -75,6 +75,26 @@ class Review extends BaseResource
     }
 
     /**
+     * Get the negative comment.
+     *
+     * @return string
+     */
+    public function getNegativeAttribute()
+    {
+        return $this->comment_negative;
+    }
+
+    /**
+     * Get the positive comment.
+     *
+     * @return string
+     */
+    public function getPositiveAttribute()
+    {
+        return $this->comment_positive;
+    }
+
+    /**
      * Determine if the review has a response from the company.
      *
      * @return bool
