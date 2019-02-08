@@ -4,6 +4,9 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+- Throw an exception when no company is found. [`6176320`](https://github.com/mvdnbrk/kiyoh-php-api/commit/6176320b5b245406cca1a87ac2970c7ee2e980c6)
+
 ## [v1.1.1] - 2019-02-08
 
 ### Changed
