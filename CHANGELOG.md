@@ -4,6 +4,11 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+## [v1.1.1] - 2019-02-08
+
+### Changed
+- Convert a review to a plain array. [`b5f0f4d`](https://github.com/mvdnbrk/kiyoh-php-api/commit/b5f0f4da336f2a5ded206ee8357b1d639c445564)
+
 ## [v1.1.0] - 2019-02-08
 
 ### Added
@@ -18,5 +23,6 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ### Initial realease
 
-[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.1...HEAD
+[v1.1.1]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.0...v1.1.1
 [v1.1.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.0.0...v1.1.0
