@@ -134,6 +134,10 @@ class Client
             throw new KiyohException("Unable to decode response: '{$body}'.");
         }
 
+        if (isset($object['error'])) {
+            throw new KiyohException($object['error']);
+        }
+
         return $object;
     }
 

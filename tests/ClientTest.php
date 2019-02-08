@@ -37,4 +37,16 @@ class ClientTest extends TestCase
 
         $this->client->performHttpCall();
     }
+
+    /** @test */
+    public function performing_an_http_call_with_invalid_credentials_throws_an_error()
+    {
+        $this->expectException(KiyohException::class);
+        $this->expectExceptionMessage('No company found.');
+
+        $this->client->setApiKey('invalid-api-key');
+        $this->client->setCompanyId('99999');
+
+        $this->client->performHttpCall();
+    }
 }
