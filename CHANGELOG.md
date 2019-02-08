@@ -4,6 +4,10 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+- Added `hasPositiveComment()`. [`78f8bcc`](https://github.com/mvdnbrk/kiyoh-php-api/commit/78f8bcca350b2a7d08a651dc2d568c496b792317) 
+- Added `hasNegativeComment()`. [`5f8b77e`](https://github.com/mvdnbrk/kiyoh-php-api/commit/5f8b77eafd51a10d1ae8ba06cd3f6900fb1c80b8) 
+
 ### Changed
 - Changed `commentPositive` to `positiveComment`. [`73107cc`](https://github.com/mvdnbrk/kiyoh-php-api/commit/73107cc82c4465fb50f9a794db8fb91748bbe140)
 - Changed `commentNegative` to `negativeComment`. [`54468dd`](https://github.com/mvdnbrk/kiyoh-php-api/commit/54468dda81b228b349d7569f0463c035552e4be8)
