@@ -30,6 +30,11 @@ class Review extends BaseResource
     public $recommendation;
 
     /**
+     * @var string
+     */
+    public $response;
+
+    /**
      * @var int
      */
     public $rating;
@@ -57,6 +62,16 @@ class Review extends BaseResource
             $attributes['author'] ?? [],
             $attributes['customer'] ?? []
         ));
+    }
+
+    /**
+     * Determine if the review has a response from the company.
+     *
+     * @return bool
+     */
+    public function hasResponse()
+    {
+        return ! empty($this->response);
     }
 
     /**

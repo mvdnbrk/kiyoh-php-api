@@ -40,4 +40,16 @@ class ReviewTest extends TestCase
         $this->assertEquals('Mark', $review->author->name);
         $this->assertEquals('Amsterdam', $review->author->locality);
     }
+
+    /** @test */
+    public function it_can_determine_if_it_has_response()
+    {
+        $review = new Review();
+
+        $this->assertFalse($review->hasResponse());
+
+        $review->response = 'Some response';
+
+        $this->assertTrue($review->hasResponse());
+    }
 }
