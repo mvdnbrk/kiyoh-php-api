@@ -218,4 +218,18 @@ class Review extends BaseResource
     {
         $this->setRatingAttribute($value);
     }
+
+    /**
+      * Convert this review to an array.
+      *
+      * @return array
+      */
+    public function toArray()
+    {
+        return collect(parent::toArray())
+            ->merge([
+                'author' => $this->author->toArray(),
+            ])
+            ->all();
+    }
 }

@@ -48,6 +48,26 @@ class ReviewTest extends TestCase
     }
 
     /** @test */
+    public function converting_to_an_array()
+    {
+        $review = new Review([
+            'id' => '1',
+            'author' => [
+                'name' => 'Mark',
+                'locality' => 'Amsterdam',
+            ],
+        ]);
+
+        $this->assertEquals([
+            'id' => '1',
+            'author' => [
+                'name' => 'Mark',
+                'locality' => 'Amsterdam',
+            ],
+        ], $review->toArray());
+    }
+
+    /** @test */
     public function it_can_determine_if_it_has_response()
     {
         $review = new Review();
