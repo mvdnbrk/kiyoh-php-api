@@ -4,6 +4,8 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+## [v1.1.2] - 2019-02-08
+
 ### Added
 - Throw an exception when no company is found. [`6176320`](https://github.com/mvdnbrk/kiyoh-php-api/commit/6176320b5b245406cca1a87ac2970c7ee2e980c6)
 
@@ -26,6 +28,7 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ### Initial realease
 
-[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.1...HEAD
+[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.2...HEAD
+[v1.1.2]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.1...v1.1.2
 [v1.1.1]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.0...v1.1.1
 [v1.1.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.0.0...v1.1.0
