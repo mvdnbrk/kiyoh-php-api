@@ -7,7 +7,7 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 ## [v1.2.0] - 2019-02-09
 
 ### Added
-- Added support for Laravel [`#1`]((https://github.com/mvdnbrk/kiyoh-php-api/pull/1)
+- Added support for Laravel. [`#1`](https://github.com/mvdnbrk/kiyoh-php-api/pull/1)
 
 ## [v1.1.4] - 2019-02-09
 
