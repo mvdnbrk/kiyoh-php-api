@@ -34,6 +34,7 @@ class CreateKiyohReviewsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('company_id');
             $table->unsignedInteger('review_id');
+            $table->unsignedTinyInteger('rating');
             $table->json('payload');
             $table->dateTime('created_at');
 

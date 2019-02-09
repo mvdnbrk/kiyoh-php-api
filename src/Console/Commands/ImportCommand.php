@@ -68,6 +68,7 @@ class ImportCommand extends Command
                 ], [
                     'company_id' => config('kiyoh.id'),
                     'review_id' => $review->id,
+                    'rating' => $review->rating,
                     'payload' => $review->toJson(),
                 ]);
 
