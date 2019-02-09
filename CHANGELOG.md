@@ -4,6 +4,11 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+## [v1.1.3] - 2019-02-09
+
+### Fixed
+- Fixed parsing a feed with only one review. [`5a34ef5`](https://github.com/mvdnbrk/kiyoh-php-api/commit/5a34ef53748550120d20e9dde3c6cf6a06a6c525)
+
 ## [v1.1.2] - 2019-02-08
 
 ### Added
@@ -28,7 +33,8 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ### Initial realease
 
-[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.2...HEAD
+[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.3...HEAD
+[v1.1.3]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.2...v1.1.3
 [v1.1.2]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.1...v1.1.2
 [v1.1.1]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.0...v1.1.1
 [v1.1.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.0.0...v1.1.0
