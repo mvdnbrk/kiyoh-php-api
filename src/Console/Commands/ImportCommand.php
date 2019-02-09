@@ -52,6 +52,9 @@ class ImportCommand extends Command
         }
 
         tap($this->client->feed->get()->reviews, function ($reviews) {
+            $this->line('Importing KiyOh reviews');
+            $this->output->newLine();
+
             $this->output->progressStart($reviews->count());
 
             $reviews->each(function ($review) {
