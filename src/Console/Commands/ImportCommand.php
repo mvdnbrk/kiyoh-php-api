@@ -13,7 +13,9 @@ class ImportCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'kiyoh:import {--limit=10 : The maximum number of reviews to fetch} {--all : Fetch all reviews}';
+    protected $signature = 'kiyoh:import
+                            {--limit=10 : The maximum number of reviews to fetch}
+                            {--all : Fetch all reviews}';
 
     /**
      * The console command description.
