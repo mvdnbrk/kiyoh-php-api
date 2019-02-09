@@ -6,6 +6,7 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [v1.1.4] - 2019-02-09
 
+### Fixed
 - Fixed limit count comparison. [`73ab257`](https://github.com/mvdnbrk/kiyoh-php-api/commit/73ab257b9aac3cd819a58dd0aa4f5665622bc4b6)
 
 ## [v1.1.3] - 2019-02-09
