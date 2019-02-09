@@ -61,7 +61,7 @@ class Feed
         $this->company->fill($response['company']);
 
         collect(
-            $this->getLimit() > 1 ? $response['review_list']['review'] : $response['review_list']
+            $this->getLimit() == 1 ? $response['review_list'] : $response['review_list']['review']
         )->each(function ($review) {
             $this->reviews->push(new Review(
                 collect($review)
