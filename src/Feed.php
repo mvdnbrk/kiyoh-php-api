@@ -60,7 +60,9 @@ class Feed
 
         $this->company->fill($response['company']);
 
-        collect($response['review_list']['review'])->each(function ($review) {
+        collect(
+            $this->getLimit() > 1 ? $response['review_list']['review'] : $response['review_list']
+        )->each(function ($review) {
             $this->reviews->push(new Review(
                 collect($review)
                     ->put('created_at', $review['customer']['date'] ?? null)
