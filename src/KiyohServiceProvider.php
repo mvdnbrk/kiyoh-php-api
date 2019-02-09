@@ -2,6 +2,7 @@
 namespace Mvdnbrk\Kiyoh;
 
 use Illuminate\Support\ServiceProvider;
+use Mvdnbrk\Kiyoh\Console\Commands\ImportCommand;
 
 class KiyohServiceProvider extends ServiceProvider
 {
@@ -19,6 +20,7 @@ class KiyohServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->registerCommands();
         $this->registerMigrations();
         $this->registerPublishing();
     }
@@ -41,6 +43,21 @@ class KiyohServiceProvider extends ServiceProvider
         });
 
         $this->app->alias(Client::class, 'kiyoh.client');
+    }
+
+
+    /**
+     * Register artisan commands.
+     *
+     * @return void
+     */
+    private function registerCommands()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                ImportCommand::class,
+            ]);
+        }
     }
 
     /**
