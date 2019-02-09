@@ -84,6 +84,16 @@ $feed->company->viewCount;
 $feed->company->reviewCount;
 $feed->company->aggregateRating;
 ```
+
+## Usage with Laravel
+
+Update your `.env` file by adding your company id and your connector code:
+
+```
+KIYOH_ID=YOUR-COMPANY-ID
+KIYOH_SECRET=YOUR-CONNECTOR-CODE
+```
+
 ## Testing
 
 ``` bash
