@@ -22,20 +22,21 @@ class ImportCommand extends Command
     protected $description = 'Import KiyOh reviews into the database';
 
     /**
-     * @var \Mvdnbrk\Kiyoh\Client
+     * @var \Mvdnbrk\Kiyoh\Feed
      */
-    protected $client;
+    protected $feed;
 
     /**
      * Create a new command instance.
      *
+     * @param  \Mvdnbrk\Kiyoh\Client  $client
      * @return void
      */
     public function __construct(Client $client)
     {
         parent::__construct();
 
-        $this->client = $client;
+        $this->feed = $client->feed;
     }
 
     /**
@@ -45,13 +46,13 @@ class ImportCommand extends Command
      */
     public function handle()
     {
-        $this->client->feed->limit($this->option('limit'));
+        $this->feed->limit($this->option('limit'));
 
         if ($this->option('all')) {
-            $this->client->feed->all();
+            $this->feed->all();
         }
 
-        tap($this->client->feed->get()->reviews, function ($reviews) {
+        tap($this->feed->get()->reviews, function ($reviews) {
             $this->line('Importing KiyOh reviews');
             $this->output->newLine();
 
