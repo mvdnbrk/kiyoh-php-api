@@ -34,4 +34,16 @@ class AuthorTest extends TestCase
 
         $this->assertSame('', $author->locality);
     }
+
+    /** @test */
+    public function it_can_determine_if_it_has_a_name()
+    {
+        $author = new Author();
+
+        $this->assertFalse($author->hasName());
+
+        $author->name = 'John Doe';
+
+        $this->assertTrue($author->hasName());
+    }
 }

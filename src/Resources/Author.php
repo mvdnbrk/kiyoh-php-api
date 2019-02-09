@@ -28,6 +28,16 @@ class Author extends BaseResource
     }
 
     /**
+     * Determine if the author has a name.
+     *
+     * @return bool
+     */
+    public function hasName()
+    {
+        return ! empty($this->name);
+    }
+
+    /**
      * Sets the name of this author.
      *
      * @param  string  $value
