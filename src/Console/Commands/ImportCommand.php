@@ -4,6 +4,7 @@ namespace Mvdnbrk\Kiyoh\Console\Commands;
 
 use Mvdnbrk\Kiyoh\Client;
 use Illuminate\Console\Command;
+use Mvdnbrk\Kiyoh\Models\Review;
 
 class ImportCommand extends Command
 {
@@ -59,6 +60,15 @@ class ImportCommand extends Command
             $this->output->progressStart($reviews->count());
 
             $reviews->each(function ($review) {
+                Review::updateOrCreate([
+                    'company_id' => config('kiyoh.id'),
+                    'review_id' => $review->id
+                ], [
+                    'company_id' => config('kiyoh.id'),
+                    'review_id' => $review->id,
+                    'payload' => $review->toJson(),
+                ]);
+
                 $this->output->progressAdvance();
             });
 
