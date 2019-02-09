@@ -4,6 +4,17 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+## [v1.2.1] - 2019-02-10
+
+### Changed
+- Set name and locality for an author to an empty string by default. [`d58447d4`](https://github.com/mvdnbrk/kiyoh-php-api/commit/d58447d481e35730a6830b04387fe809faaa1d27)
+- Discard empty values for name and locality for an author. [`bc5dca6`](https://github.com/mvdnbrk/kiyoh-php-api/commit/bc5dca603b6aef53def4713970f05fe216765da7)
+- Save the original created_at date/time from the review. [`2f4c285`](https://github.com/mvdnbrk/kiyoh-php-api/commit/2f4c285ae2006cd856abd35038261d28fa2d9784)
+- Save the rating of a review in it's own column. [`a1c47ff`](https://github.com/mvdnbrk/kiyoh-php-api/commit/a1c47ff6f5b227b11ef56ce56c0287d73e453bec)
+
+### Fixed
+- Use `toArray()` instead of `toJson()` when saving record to database. [`b6444c6`](https://github.com/mvdnbrk/kiyoh-php-api/commit/b6444c6dabcae9a8f6be4223b47276b756fb7692)
+
 ## [v1.2.0] - 2019-02-09
 
 ### Added
@@ -43,7 +54,8 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ### Initial realease
 
-[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.2.1...HEAD
+[v1.2.1]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.2.0...v1.2.1
 [v1.2.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.4...v1.2.0
 [v1.1.4]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.3...v1.1.4
 [v1.1.3]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.2...v1.1.3
