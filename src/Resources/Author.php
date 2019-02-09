@@ -15,13 +15,44 @@ class Author extends BaseResource
     public $locality;
 
     /**
-     * Alias 'place' to the 'locality' attribute.
+    /**
+     * Sets the name of this author.
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setNameAttribute($value)
+    {
+        if (empty($value)) {
+            return;
+        }
+
+        $this->name = trim($value);
+    }
+
+    /**
+     * Sets the locality for this author.
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setLocalityAttribute($value)
+    {
+        if (empty($value)) {
+            return;
+        }
+
+        $this->locality = trim($value);
+    }
+
+    /**
+     * Alias for setLocalityAttribute().
      *
      * @param  string  $value
      * @return void
      */
     public function setPlaceAttribute($value)
     {
-        $this->locality = $value;
+        $this->setLocalityAttribute($value);
     }
 }
