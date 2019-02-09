@@ -3,6 +3,7 @@
 namespace Mvdnbrk\Kiyoh\Console\Commands;
 
 use Mvdnbrk\Kiyoh\Client;
+use Illuminate\Support\Carbon;
 use Illuminate\Console\Command;
 use Mvdnbrk\Kiyoh\Models\Review;
 
@@ -70,6 +71,7 @@ class ImportCommand extends Command
                     'review_id' => $review->id,
                     'rating' => $review->rating,
                     'payload' => $review->toArray(),
+                    'created_at' => Carbon::parse($review->created_at),
                 ]);
 
                 $this->output->progressAdvance();
