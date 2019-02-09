@@ -33,7 +33,7 @@ class CreateKiyohReviewsTable extends Migration
         Schema::create($this->table_name, function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('company_id');
-            $table->unsignedIinteger('review_id');
+            $table->unsignedInteger('review_id');
             $table->json('payload');
             $table->dateTime('created_at');
 
