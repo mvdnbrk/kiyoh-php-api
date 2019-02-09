@@ -46,4 +46,16 @@ class AuthorTest extends TestCase
 
         $this->assertTrue($author->hasName());
     }
+
+    /** @test */
+    public function it_can_determine_if_it_has_a_locality()
+    {
+        $author = new Author();
+
+        $this->assertFalse($author->hasLocality());
+
+        $author->locality = 'Amsterdam';
+
+        $this->assertTrue($author->hasLocality());
+    }
 }

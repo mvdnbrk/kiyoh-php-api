@@ -66,6 +66,8 @@ $feed->reviews->each(function ($review) {
     // author
     $review->author->hasName();
     $review->author->name;
+
+    $review->author->hasLocality();
     $review->author->locality;
 
     // response

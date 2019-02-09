@@ -38,6 +38,16 @@ class Author extends BaseResource
     }
 
     /**
+     * Determine if the author has a name.
+     *
+     * @return bool
+     */
+    public function hasLocality()
+    {
+        return ! empty($this->locality);
+    }
+
+    /**
      * Sets the name of this author.
      *
      * @param  string  $value
