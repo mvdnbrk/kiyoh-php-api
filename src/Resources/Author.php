@@ -15,6 +15,18 @@ class Author extends BaseResource
     public $locality;
 
     /**
+     * Create a new Author instance.
+     *
+     * @param  array|object  $attributes
+     */
+    public function __construct($attributes = [])
+    {
+        $this->name = '';
+        $this->locality = '';
+
+        $this->fill($attributes);
+    }
+
     /**
      * Sets the name of this author.
      *
