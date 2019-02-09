@@ -52,7 +52,7 @@ class Company extends BaseResource
     /**
      * Get the view count attribute,
      *
-     * @return intt
+     * @return int
      */
     public function getViewCountAttribute()
     {
@@ -63,7 +63,7 @@ class Company extends BaseResource
      * Sets aggregate rating for this company.
      *
      * @param  float|string  $value
-     * @return  void
+     * @return void
      */
     public function setAggregateRatingAttribute($value)
     {
@@ -74,7 +74,7 @@ class Company extends BaseResource
      * Sets total review count for this company.
      *
      * @param  int|string  $value
-     * @return  void
+     * @return void
      */
     public function setReviewCountAttribute($value)
     {
@@ -85,7 +85,7 @@ class Company extends BaseResource
      * Alias for setReviewCountAttribute().
      *
      * @param  int|string  $value
-     * @return  void
+     * @return void
      */
     public function setTotalReviewsAttribute($value)
     {
@@ -96,7 +96,7 @@ class Company extends BaseResource
      * Alias for setAggregateRatingAttribute().
      *
      * @param  float|string  $value
-     * @return  void
+     * @return void
      */
     public function setTotalScoreAttribute($value)
     {
@@ -107,7 +107,7 @@ class Company extends BaseResource
      * Sets the views for this company.
      *
      * @param  int|string  $value
-     * @return  void
+     * @return void
      */
     public function setViewCountAttribute($value)
     {
@@ -118,7 +118,7 @@ class Company extends BaseResource
      * Alias for setViewsAttribute().
      *
      * @param  int|string  $value
-     * @return  void
+     * @return void
      */
     public function setTotalViewsAttribute($value)
     {

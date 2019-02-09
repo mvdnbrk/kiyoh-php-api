@@ -212,7 +212,7 @@ class Review extends BaseResource
      * Alias for setRatingAttribute().
      *
      * @param  int|string  $value
-     * @return  void
+     * @return void
      */
     public function setTotalScoreAttribute($value)
     {
