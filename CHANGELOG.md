@@ -4,6 +4,12 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+## [v1.2.2] - 2019-02-10
+
+### Added
+- Adds function hasName() to Author.[`b2fdaed`](https://github.com/mvdnbrk/kiyoh-php-api/commit/b2fdaed6b97583ffdc7c7bc56157e9a6601e4b85)
+- Adds function hasLocality() to Author. [`8d392ddd`](https://github.com/mvdnbrk/kiyoh-php-api/commit/8d392dddddcd8a2c3b65aaf9e5f4cf85d27705fa)
+
 ## [v1.2.1] - 2019-02-10
 
 ### Changed
@@ -54,7 +60,8 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ### Initial realease
 
-[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.2.1...HEAD
+[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.2.2...HEAD
+[v1.2.2]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.2.1...v1.2.2
 [v1.2.1]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.2.0...v1.2.1
 [v1.2.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.4...v1.2.0
 [v1.1.4]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.1.3...v1.1.4
