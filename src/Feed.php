@@ -104,8 +104,8 @@ class Feed
      */
     public function limit($value)
     {
-        if (is_int($value) && $value >= 0) {
-            $this->limit = $value;
+        if (is_numeric($value) && $value >= 0) {
+            $this->limit = (int) $value;
         }
 
         return $this;
