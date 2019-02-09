@@ -5,7 +5,8 @@
         "php",
         "api",
         "kiyoh",
-        "reviews"
+        "reviews",
+        "laravel"
     ],
     "homepage": "https://github.com/mvdnbrk/kiyoh-php-api",
     "license": "MIT",
