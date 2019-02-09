@@ -18,4 +18,20 @@ class AuthorTest extends TestCase
         $this->assertEquals('John Doe', $author->name);
         $this->assertEquals('Amsterdam', $author->locality);
     }
+
+    /** @test */
+    public function name_is_an_empty_string_by_default()
+    {
+        $author = new Author();
+
+        $this->assertSame('', $author->name);
+    }
+
+    /** @test */
+    public function locality_is_an_empty_string_by_default()
+    {
+        $author = new Author();
+
+        $this->assertSame('', $author->locality);
+    }
 }
