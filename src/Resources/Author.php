@@ -18,7 +18,7 @@ class Author extends BaseResource
      * Alias 'place' to the 'locality' attribute.
      *
      * @param  string  $value
-     * @return  void
+     * @return void
      */
     public function setPlaceAttribute($value)
     {
