@@ -8,6 +8,8 @@
 [![StyleCI][ico-style-ci]][link-style-ci]
 [![Total Downloads][ico-downloads]][link-downloads]
 
+Simple PHP API to fetch your KiyOh reviews from the XML feed.
+
 ## Installation
 
 You can install the package via composer:
