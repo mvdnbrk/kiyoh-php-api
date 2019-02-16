@@ -10,9 +10,9 @@ class StrTest extends TestCase
     /** @test */
     public function studly()
     {
-        $this->assertEquals('MvdnbrkKiyOhPhp', Str::studly('mvdnbrk_kiy_oh_php'));
-        $this->assertEquals('MvdnbrkKiyohPhp', Str::studly('mvdnbrk_kiyoh_php'));
-        $this->assertEquals('MvdnbrkKiyohPhp', Str::studly('mvdnbrk-kiyoh-php'));
-        $this->assertEquals('MvdnbrkKiyohPhp', Str::studly('mvdnbrk  -_-  kiyoh   -_-   php   '));
+        $this->assertEquals('MvdnbrkTestStringPhp', Str::studly('mvdnbrk_test_string_php'));
+        $this->assertEquals('MvdnbrkStringPhp', Str::studly('mvdnbrk_string_php'));
+        $this->assertEquals('MvdnbrkTestStringPhp', Str::studly('mvdnbrk-testString-php'));
+        $this->assertEquals('MvdnbrkStringPhp', Str::studly('mvdnbrk  -_-  string   -_-   php   '));
     }
 }
