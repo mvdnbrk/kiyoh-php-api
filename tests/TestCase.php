@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         try {
             (new Dotenv('./', '.env'))->load();
