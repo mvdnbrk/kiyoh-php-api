@@ -38,7 +38,7 @@ class Review extends Model
      */
     public function __construct(array $attributes = [])
     {
-        $this->table = config('kiyoh.table_name');
+        $this->setTable(config('kiyoh.table_name'));
 
         parent::__construct($attributes);
     }
