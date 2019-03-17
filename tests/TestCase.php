@@ -4,11 +4,12 @@ namespace Mvdnbrk\Kiyoh\Tests;
 
 use Dotenv\Dotenv;
 use Mvdnbrk\Kiyoh\Client;
+use Mvdnbrk\Kiyoh\KiyohServiceProvider;
 use Dotenv\Exception\InvalidFileException;
 use Dotenv\Exception\InvalidPathException;
-use PHPUnit\Framework\TestCase as BaseTestCase;
+use Orchestra\Testbench\TestCase as Orchestra;
 
-abstract class TestCase extends BaseTestCase
+abstract class TestCase extends Orchestra
 {
     protected function setUp(): void
     {
@@ -25,5 +26,34 @@ abstract class TestCase extends BaseTestCase
         $this->client->setApiKey(getenv('KIYOH_SECRET'));
 
         parent::setUp();
+    }
+
+    /**
+     * Define environment setup.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     * @return void
+     */
+    protected function getEnvironmentSetUp($app)
+    {
+        $app['config']->set('database.default', 'testbench');
+        $app['config']->set('database.connections.testbench', [
+            'driver'   => 'sqlite',
+            'database' => ':memory:',
+            'prefix'   => '',
+        ]);
+    }
+
+    /**
+     * Get package providers.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     * @return array
+     */
+    protected function getPackageProviders($app)
+    {
+        return [
+            KiyohServiceProvider::class,
+        ];
     }
 }

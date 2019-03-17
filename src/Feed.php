@@ -5,6 +5,7 @@ namespace Mvdnbrk\Kiyoh;
 use Mvdnbrk\Kiyoh\Client;
 use Mvdnbrk\Kiyoh\Resources\Review;
 use Mvdnbrk\Kiyoh\Resources\Company;
+use Tightenco\Collect\Support\Collection;
 
 class Feed
 {
@@ -43,7 +44,7 @@ class Feed
         $this->limit = 10;
 
         $this->company = new Company();
-        $this->reviews = collect();
+        $this->reviews = new Collection();
     }
 
     /**
@@ -64,7 +65,7 @@ class Feed
             $this->getLimit() == 1 ? $response['review_list'] : $response['review_list']['review']
         )->each(function ($review) {
             $this->reviews->push(new Review(
-                collect($review)
+                (new Collection($review))
                     ->put('created_at', $review['customer']['date'] ?? null)
                     ->filter()
                     ->all()

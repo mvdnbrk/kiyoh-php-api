@@ -5,7 +5,7 @@ namespace Mvdnbrk\Kiyoh\Tests\Unit\Resources;
 use Mvdnbrk\Kiyoh\Tests\TestCase;
 use Mvdnbrk\Kiyoh\Resources\Review;
 
-class ReviewTest extends TestCase
+class ReviewResourceTest extends TestCase
 {
     /** @test */
     public function creating_a_review()

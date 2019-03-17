@@ -42,7 +42,7 @@ class KiyohServiceProvider extends ServiceProvider
             );
         });
 
-        $this->app->alias(Client::class, 'kiyoh.client');
+        $this->app->alias(Client::class, 'kiyoh');
     }
 
 
@@ -107,6 +107,6 @@ class KiyohServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return [Client::class, 'kiyoh.client'];
+        return ['kiyoh'];
     }
 }
