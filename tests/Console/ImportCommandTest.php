@@ -6,7 +6,7 @@ use Mvdnbrk\Kiyoh\Models\Review;
 use Mvdnbrk\Kiyoh\Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class MigrationTest extends TestCase
+class ImportCommandTest extends TestCase
 {
     use RefreshDatabase;
 
