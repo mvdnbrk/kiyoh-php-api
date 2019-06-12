@@ -22,6 +22,7 @@
         "php": "^7.1",
         "composer/ca-bundle": "^1.1",
         "guzzlehttp/guzzle": "^6.3",
+        "scrutinizer/ocular": "^1.5",
         "tightenco/collect": "^5.8"
     },
     "require-dev": {
