@@ -32,5 +32,9 @@ class MigrationTest extends TestCase
         Kiyoh::ignoreMigrations();
 
         $this->assertFalse(Kiyoh::$runsMigrations);
+
+        Kiyoh::$runsMigrations = true;
+
+        $this->assertTrue(Kiyoh::$runsMigrations);
     }
 }
