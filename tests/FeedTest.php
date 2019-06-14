@@ -62,7 +62,7 @@ class FeedTest extends TestCase
         $this->assertSame(123456, $feed->company->id);
         $this->assertEquals('MyCompany', $feed->company->name);
         $this->assertSame(9.0, $feed->company->averageRating);
-        $this->assertSame(2500, $feed->company->reviewCount);
+        $this->assertSame(3, $feed->company->reviewCount);
         $this->assertSame(97, $feed->company->recommendationPercentage);
 
         $this->assertCount(3, $feed->reviews);
