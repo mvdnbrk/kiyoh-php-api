@@ -14,7 +14,7 @@ class Client
     /**
      * Endpoint of the remote API.
      */
-    const API_ENDPOINT = 'https://www.kiyoh.nl/xml/recent_company_reviews.xml';
+    const API_ENDPOINT = 'https://www.kiyoh.com/v1/review/feed.json';
 
     /**
      * @var string
