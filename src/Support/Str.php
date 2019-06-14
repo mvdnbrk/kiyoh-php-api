@@ -12,6 +12,22 @@ class Str
     protected static $studlyCache = [];
 
     /**
+     * Determine if a given string starts with a given substring.
+     *
+     * @param  string  $haystack
+     * @param  string  $needle
+     * @return bool
+     */
+    public static function startsWith($haystack, $needle)
+    {
+        if ($needle !== '' && substr($haystack, 0, strlen($needle)) === (string) $needle) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
      * Convert a value to studly caps case.
      *
      * @param  string  $value
