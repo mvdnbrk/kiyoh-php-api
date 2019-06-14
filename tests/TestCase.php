@@ -3,14 +3,30 @@
 namespace Mvdnbrk\Kiyoh\Tests;
 
 use Dotenv\Dotenv;
-use Mvdnbrk\Kiyoh\Client;
+use GuzzleHttp\Client as GuzzleClient;
 use Mvdnbrk\Kiyoh\KiyohServiceProvider;
+use Mvdnbrk\Kiyoh\Client as KiyohClient;
 use Dotenv\Exception\InvalidFileException;
 use Dotenv\Exception\InvalidPathException;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra
 {
+    /**
+     * @var \Mvdnbrk\Kiyoh\Client
+     */
+    protected $client;
+
+    /**
+     * @var \GuzzleHttp\ClientInterface;
+     */
+    protected $guzzleClient;
+
+    /**
+     * Setup the test environment.
+     *
+     * @return void
+     */
     protected function setUp(): void
     {
         try {
@@ -21,8 +37,9 @@ abstract class TestCase extends Orchestra
             die('The environment file is invalid: '.$e->getMessage());
         }
 
-        $this->client = new Client();
-        $this->client->setCompanyId(getenv('KIYOH_ID'));
+        $this->guzzleClient = $this->createMock(GuzzleClient::class);
+
+        $this->client = new KiyohClient($this->guzzleClient);
         $this->client->setApiKey(getenv('KIYOH_SECRET'));
 
         parent::setUp();
