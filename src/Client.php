@@ -118,13 +118,7 @@ class Client
     {
         $body = $response->getBody()->getContents();
 
-        $simplexml = simplexml_load_string($body);
-
-        if ($simplexml === false) {
-            throw new KiyohException("XML parse error: '{$body}'.");
-        }
-
-        $object = @json_decode(@json_encode($simplexml), true);
+        $object = @json_decode($body, true);
 
         if (json_last_error() != JSON_ERROR_NONE) {
             throw new KiyohException("Unable to decode response: '{$body}'.");
