@@ -55,8 +55,7 @@ class Feed
     public function get()
     {
         $response = $this->apiClient->performHttpCall([
-            'reviewcount' => $this->getLimit(),
-            'showextraquestions' => 0,
+            'limit' => $this->getLimit(),
         ]);
 
         $this->company->fill($response['company']);
