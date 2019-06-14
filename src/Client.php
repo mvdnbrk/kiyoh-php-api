@@ -5,6 +5,7 @@ namespace Mvdnbrk\Kiyoh;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use Composer\CaBundle\CaBundle;
+use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Exception\GuzzleException;
 use Mvdnbrk\Kiyoh\Exceptions\KiyohException;
@@ -44,10 +45,10 @@ class Client
     /**
      * Create a new Client instance.
      */
-    public function __construct()
+    public function __construct(ClientInterface $httpClient = null)
     {
-        $this->httpClient = new HttpClient([
-            RequestOptions::VERIFY => CaBundle::getBundledCaBundlePath()
+        $this->httpClient = $httpClient ?: new HttpClient([
+            RequestOptions::VERIFY => CaBundle::getBundledCaBundlePath(),
             RequestOptions::TIMEOUT => self::TIMEOUT,
         ]);
 
