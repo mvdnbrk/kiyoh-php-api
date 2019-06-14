@@ -17,11 +17,11 @@ class MigrationTest extends TestCase
 
         $this->assertEquals([
             'id',
-            'company_id',
             'review_id',
             'rating',
             'payload',
             'created_at',
+            'updated_at',
         ], $columns);
     }
 }

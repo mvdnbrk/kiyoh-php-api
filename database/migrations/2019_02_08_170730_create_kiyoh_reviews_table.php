@@ -31,14 +31,11 @@ class CreateKiyohReviewsTable extends Migration
     public function up()
     {
         Schema::create($this->table_name, function (Blueprint $table) {
-            $table->increments('id');
-            $table->unsignedInteger('company_id');
-            $table->unsignedInteger('review_id');
+            $table->bigIncrements('id');
+            $table->uuid('review_id')->unique();
             $table->unsignedTinyInteger('rating');
             $table->json('payload');
-            $table->dateTime('created_at');
-
-            $table->unique(['company_id', 'review_id']);
+            $table->timestamps();
         });
     }
 
