@@ -1,4 +1,5 @@
 <?php
+
 namespace Mvdnbrk\Kiyoh;
 
 use Illuminate\Support\ServiceProvider;
@@ -95,7 +96,7 @@ class KiyohServiceProvider extends ServiceProvider
      */
     protected function shouldMigrate()
     {
-        return true;
+        return Kiyoh::$runsMigrations;
     }
 
     /**

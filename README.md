@@ -111,7 +111,7 @@ To publish the migration file run:
 php artisan vendor:publish --tag=kiyoh-migrations
 ```
 
-To publish the 
+If you are not going to use the default migrations, you should call the `Kiyoh::ignoreMigrations()` method in the register method of your `AppServiceProvider`. 
 
 ## Testing
 
