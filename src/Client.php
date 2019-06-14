@@ -20,6 +20,7 @@ class Client
      * @var string
      */
     protected $apiEndpoint = self::API_ENDPOINT;
+    const TIMEOUT = 10;
 
     /**
      * @var string
@@ -47,6 +48,7 @@ class Client
     {
         $this->httpClient = new HttpClient([
             RequestOptions::VERIFY => CaBundle::getBundledCaBundlePath()
+            RequestOptions::TIMEOUT => self::TIMEOUT,
         ]);
 
         $this->feed = new Feed($this);
