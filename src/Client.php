@@ -29,7 +29,6 @@ class Client
     /**
      * @var string
      */
-    protected $companyId;
 
     /**
      * @var \GuzzleHttp\Client
@@ -74,7 +73,6 @@ class Client
     {
         return array_merge($filters, [
             'connectorcode' => $this->apiKey,
-            'company_id' => $this->companyId,
         ]);
     }
 
@@ -89,10 +87,6 @@ class Client
     {
         if (empty($this->apiKey)) {
             throw new KiyohException('You have not set an API key. Please use setApiKey() to set the API key.');
-        }
-
-        if (empty($this->companyId)) {
-            throw new KiyohException('You have not set a company ID. Please use setCompanyId() to set the company ID.');
         }
 
         $request = new Request('GET', $this->apiEndpoint.$this->buildQueryString(
@@ -150,19 +144,6 @@ class Client
     public function setApiKey($value)
     {
         $this->apiKey = trim($value);
-
-        return $this;
-    }
-
-    /**
-     * Sets the Company ID.
-     *
-     * @param  int  $value
-     * @return \Mvdnbrk\Kiyoh\Client
-     */
-    public function setCompanyId($value)
-    {
-        $this->companyId = trim($value);
 
         return $this;
     }
