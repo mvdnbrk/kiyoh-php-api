@@ -25,8 +25,7 @@ Initialize the KiyOh client and set your API key and company ID:
 ``` php
 $client = new \Mvdnbrk\Kiyoh\Client();
 
-$client->setApiKey('your-connector-code');
-$client->setCompanyId('1234');
+$client->setApiKey('your-secret-hash');
 ```
 
 ### Retrieve the KiyOh feed
@@ -41,12 +40,6 @@ You may change the number of reviews to retrieve by using the `limit()` method:
 $feed = $kiyoh->feed->limit(25)->get();
 ```
 
-If you would like to retrieve all reviews you may use the `all()` method:
-
-```php
-$feed = $kiyoh->feed->all()->get();
-```
-
 ### Reviews
 
 ```php
@@ -55,13 +48,8 @@ $feed->reviews->each(function ($review) {
     $review->rating;
     $review->recommendation;
 
-    $review->hasPositiveComment();
-    $review->positiveComment;
-
-    $review->hasNegativeComment();
-    $review->negativeComment;
-
     $review->createdAt;
+    $review->updatedAt;
 
     // author
     $review->author->hasName();
@@ -70,24 +58,16 @@ $feed->reviews->each(function ($review) {
     $review->author->hasLocality();
     $review->author->locality;
 
-    // response
-    $review->hasResponse();
-    $review->response;
-
-    // array of "extra options"
-    $review->meta;
-
 });
 ```
 
 ### Company properties and statistics
 ```php
-$feed->company->url;
+$feed->company->id;
 $feed->company->name;
-
-$feed->company->viewCount;
 $feed->company->reviewCount;
-$feed->company->aggregateRating;
+$feed->company->averageRating;
+$feed->company->recommendationPercentage;
 ```
 
 ## Usage with Laravel
@@ -95,8 +75,7 @@ $feed->company->aggregateRating;
 Update your `.env` file by adding your company id and your connector code:
 
 ```
-KIYOH_ID=YOUR-COMPANY-ID
-KIYOH_SECRET=YOUR-CONNECTOR-CODE
+KIYOH_SECRET=YOUR-SECRET-HASH
 ```
 
 ## Testing
