@@ -36,6 +36,20 @@ class AuthorTest extends TestCase
     }
 
     /** @test */
+    public function it_has_aliases_for_properties()
+    {
+        $author = new Author([
+            'reviewAuthor' => 'John',
+            'city' => 'Amsterdam',
+        ]);
+
+        $this->assertEquals('John', $author->name);
+        $this->assertEquals('John', $author->reviewAuthor);
+        $this->assertEquals('Amsterdam', $author->locality);
+        $this->assertEquals('Amsterdam', $author->city);
+    }
+
+    /** @test */
     public function it_can_determine_if_it_has_a_name()
     {
         $author = new Author();
@@ -57,5 +71,19 @@ class AuthorTest extends TestCase
         $author->locality = 'Amsterdam';
 
         $this->assertTrue($author->hasLocality());
+    }
+
+    /** @test */
+    public function convenrting_to_an_array()
+    {
+        $author = new Author([
+            'name' => 'John Doe',
+            'locality' => 'Amsterdam',
+        ]);
+
+        $this->assertEquals([
+            'name' => 'John Doe',
+            'locality' => 'Amsterdam',
+        ], $author->toArray());
     }
 }

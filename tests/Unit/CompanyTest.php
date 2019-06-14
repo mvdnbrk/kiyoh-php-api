@@ -11,62 +11,70 @@ class CompanyTest extends TestCase
     public function creating_a_company()
     {
         $company = new Company([
+            'id' => '123',
             'name' => 'MyCompany',
-            'url' => 'https://kiyoh.nl/my-company',
-            'view_count' => '123456',
             'review_count' => '9999',
-            'aggregate_rating' => '9.8',
+            'average_rating' => '9.8',
+            'recommendation_percentage' => '99',
         ]);
 
+        $this->assertSame(123, $company->id);
         $this->assertEquals('MyCompany', $company->name);
-        $this->assertEquals('https://kiyoh.nl/my-company', $company->url);
-        $this->assertSame(123456, $company->view_count);
         $this->assertSame(9999, $company->review_count);
-        $this->assertSame(9.8, $company->aggregate_rating);
+        $this->assertSame(9.8, $company->average_rating);
+        $this->assertSame(99, $company->recommendation_percentage);
+    }
+
+    /** @test */
+    public function creating_a_company_from_kiyoh_feed_data()
+    {
+        $company = new Company([
+            'locationId' => '123',
+            'locationName' => 'MyCompany',
+            'numberReviews' => '9999',
+            'percentageRecommendation' => '97',
+            'averageRating' => '9.8',
+        ]);
+
+        $this->assertSame(123, $company->id);
+        $this->assertEquals('MyCompany', $company->name);
+        $this->assertSame(9999, $company->review_count);
+        $this->assertSame(97, $company->recommendation_percentage);
+        $this->assertSame(9.8, $company->average_rating);
     }
 
     /** @test */
     public function it_has_aliases_for_properties()
     {
-        $company = new Company();
+        $company = new Company([
+            'numberReviews' => 222,
+            'percentageRecommendation' => 97,
+        ]);
 
-        $company->total_views = 111;
-        $this->assertSame(111, $company->view_count);
+        $this->assertSame(222, $company->reviewCount);
+        $this->assertSame(222, $company->numberReviews);
 
-        $company->total_reviews = 222;
-        $this->assertSame(222, $company->review_count);
-
-        $company->total_score = 10.0;
-        $this->assertSame(10.0, $company->aggregate_rating);
+        $this->assertSame(97, $company->recommendationPercentage);
+        $this->assertSame(97, $company->percentageRecommendation);
     }
 
     /** @test */
-    public function it_can_get_the_aggregate_rating()
+    public function convenrting_to_an_array()
     {
         $company = new Company([
-            'aggregate_rating' => '9.8',
+            'id' => '123',
+            'name' => 'MyCompany',
+            'review_count' => '9999',
+            'average_rating' => '9.8',
+            'recommendation_percentage' => '99',
         ]);
 
-        $this->assertSame(9.8, $company->aggregateRating);
-    }
-
-    /** @test */
-    public function it_can_get_the_review_count()
-    {
-        $company = new Company([
-            'review_count' => '123456',
-        ]);
-
-        $this->assertSame(123456, $company->reviewCount);
-    }
-
-    /** @test */
-    public function it_can_get_the_view_count()
-    {
-        $company = new Company([
-            'view_count' => '123456',
-        ]);
-
-        $this->assertSame(123456, $company->viewCount);
+        $this->assertEquals([
+            'id' => '123',
+            'name' => 'MyCompany',
+            'review_count' => '9999',
+            'average_rating' => '9.8',
+            'recommendation_percentage' => '99',
+        ], $company->toArray());
     }
 }

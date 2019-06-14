@@ -11,95 +11,80 @@ class ReviewResourceTest extends TestCase
     public function creating_a_review()
     {
         $review = new Review([
-            'id' => '1',
+            'uuid' => '1',
             'rating' => '10',
-            'recommendation' => 'Yes',
-            'comment_positive' => 'Positive comment',
-            'comment_negative' => 'Negative comment',
+            'recommendation' => true,
             'created_at' => '2019-02-01 12:34:56',
+            'updated_at' => '2019-02-02 12:34:56',
             'author' => [
-                'name' => 'Mark',
+                'name' => 'John',
                 'locality' => 'Amsterdam',
             ],
-            'meta' => [
-                'reference' => 'some-value',
-                'foo' => 'bar',
-            ],
-            'response' => 'Some response',
         ]);
 
-        $this->assertSame(1, $review->id);
+        $this->assertEquals('1', $review->uuid);
         $this->assertSame(10, $review->rating);
         $this->assertTrue($review->recommendation);
 
-        $this->assertEquals('Positive comment', $review->comment_positive);
-        $this->assertEquals('Negative comment', $review->comment_negative);
-        $this->assertEquals('Positive comment', $review->positiveComment);
-        $this->assertEquals('Negative comment', $review->negativeComment);
-
         $this->assertEquals('2019-02-01 12:34:56', $review->created_at);
         $this->assertEquals('2019-02-01 12:34:56', $review->createdAt);
+        $this->assertEquals('2019-02-02 12:34:56', $review->updated_at);
+        $this->assertEquals('2019-02-02 12:34:56', $review->updatedAt);
 
-        $this->assertEquals(['reference' => 'some-value', 'foo' => 'bar'], $review->meta);
-        $this->assertEquals('Some response', $review->response);
-
-        $this->assertEquals('Mark', $review->author->name);
+        $this->assertEquals('John', $review->author->name);
         $this->assertEquals('Amsterdam', $review->author->locality);
+    }
+
+    /** @test */
+    public function it_has_aliases_for_properties()
+    {
+        $review = new Review([
+            'uuid' => '1234-aaaa',
+        ]);
+
+        $this->assertEquals('1234-aaaa', $review->uuid);
+        $this->assertEquals('1234-aaaa', $review->reviewId);
+    }
+
+    /** @test */
+    public function it_can_set_the_recommendation()
+    {
+        $review = new Review();
+
+        $this->assertFalse($review->recommendation);
+
+        $review->recommendation = true;
+        $this->assertTrue($review->recommendation);
+
+        $review->recommendation = 'true';
+        $this->assertTrue($review->recommendation);
+
+        $review->recommendation = false;
+        $this->assertFalse($review->recommendation);
+
+        $review->recommendation = 'false';
+        $this->assertFalse($review->recommendation);
     }
 
     /** @test */
     public function converting_to_an_array()
     {
         $review = new Review([
-            'id' => '1',
+            'uuid' => '1',
             'author' => [
                 'name' => 'Mark',
                 'locality' => 'Amsterdam',
             ],
+            'recommendation' => true,
         ]);
 
         $this->assertEquals([
-            'id' => '1',
+            'uuid' => '1',
             'author' => [
                 'name' => 'Mark',
                 'locality' => 'Amsterdam',
             ],
+            'recommendation' => true,
         ], $review->toArray());
-    }
-
-    /** @test */
-    public function it_can_determine_if_it_has_response()
-    {
-        $review = new Review();
-
-        $this->assertFalse($review->hasResponse());
-
-        $review->response = 'Some response';
-
-        $this->assertTrue($review->hasResponse());
-    }
-
-    /** @test */
-    public function it_can_determine_if_it_has_a_positive_comment()
-    {
-        $review = new Review();
-
-        $this->assertFalse($review->hasPositiveComment());
-
-        $review->comment_positive = 'Some positive comment';
-
-        $this->assertTrue($review->hasPositiveComment());
-    }
-
-    /** @test */
-    public function it_can_determine_if_it_has_a_negative_comment()
-    {
-        $review = new Review();
-
-        $this->assertFalse($review->hasNegativeComment());
-
-        $review->comment_negative = 'Some negative comment';
-
-        $this->assertTrue($review->hasNegativeComment());
     }
 }
