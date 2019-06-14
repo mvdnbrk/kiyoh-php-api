@@ -14,6 +14,8 @@ class ReviewResourceTest extends TestCase
             'uuid' => '1',
             'rating' => '10',
             'recommendation' => true,
+            'headline' => 'Lorem ipsum headline.',
+            'text' => 'Lorem ipsum text.',
             'created_at' => '2019-02-01 12:34:56',
             'updated_at' => '2019-02-02 12:34:56',
             'author' => [
@@ -25,7 +27,8 @@ class ReviewResourceTest extends TestCase
         $this->assertEquals('1', $review->uuid);
         $this->assertSame(10, $review->rating);
         $this->assertTrue($review->recommendation);
-
+        $this->assertEquals('Lorem ipsum headline.', $review->headline);
+        $this->assertEquals('Lorem ipsum text.', $review->text);
         $this->assertEquals('2019-02-01 12:34:56', $review->created_at);
         $this->assertEquals('2019-02-01 12:34:56', $review->createdAt);
         $this->assertEquals('2019-02-02 12:34:56', $review->updated_at);
@@ -71,20 +74,26 @@ class ReviewResourceTest extends TestCase
     {
         $review = new Review([
             'uuid' => '1',
+            'rating' => '10',
+            'recommendation' => true,
+            'headline' => 'headline text',
+            'text' => 'body text',
             'author' => [
                 'name' => 'Mark',
                 'locality' => 'Amsterdam',
             ],
-            'recommendation' => true,
         ]);
 
         $this->assertEquals([
             'uuid' => '1',
+            'rating' => 10,
+            'recommendation' => true,
+            'headline' => 'headline text',
+            'text' => 'body text',
             'author' => [
                 'name' => 'Mark',
                 'locality' => 'Amsterdam',
             ],
-            'recommendation' => true,
         ], $review->toArray());
     }
 }

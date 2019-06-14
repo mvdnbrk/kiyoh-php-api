@@ -15,9 +15,19 @@ class Review extends BaseResource
     public $author;
 
     /**
+     * @var string
+     */
+    public $headline;
+
+    /**
      * @var bool
      */
     protected $recommendation;
+
+    /**
+     * @var string
+     */
+    public $text;
 
     /**
      * @var int
