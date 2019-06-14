@@ -17,7 +17,7 @@ class Feed
     /**
      * The maximum number of reviews to fetch.
      *
-     * @var int|string
+     * @var int
      */
     protected $limit;
 
@@ -78,7 +78,7 @@ class Feed
     /**
      * Get the maximum numbers of reviews.
      *
-     * @return int|string
+     * @return int
      */
     public function getLimit()
     {
