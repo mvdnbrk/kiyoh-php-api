@@ -149,7 +149,7 @@ class Feed
      */
     private function getReviewAttributes(array $array)
     {
-        $attributes = collect($array)->only('reviewContent')->flatten(1)->mapWithKeys(function($item) {
+        $attributes = collect($array)->only('reviewContent')->flatten(1)->mapWithKeys(function ($item) {
             if ($key = $this->lookupReviewContentAttribute($item['questionGroup'])) {
                 return [
                     $key => $item['rating'],
