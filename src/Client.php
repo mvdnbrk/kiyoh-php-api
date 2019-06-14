@@ -18,19 +18,19 @@ class Client
     const API_ENDPOINT = 'https://www.kiyoh.com/v1/review/feed.json';
 
     /**
-     * @var string
+     * Default response timeout (in seconds).
      */
-    protected $apiEndpoint = self::API_ENDPOINT;
     const TIMEOUT = 10;
 
     /**
      * @var string
      */
-    protected $apiKey;
+    protected $apiEndpoint = self::API_ENDPOINT;
 
     /**
      * @var string
      */
+    protected $apiKey;
 
     /**
      * @var \GuzzleHttp\Client
