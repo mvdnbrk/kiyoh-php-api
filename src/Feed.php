@@ -58,17 +58,18 @@ class Feed
             'limit' => $this->getLimit(),
         ]);
 
-        $this->company->fill($response['company']);
+        $this->company->fill([
+            'locationId' => $response['locationId'],
+            'locationName' => $response['locationName'],
+            'averageRating' => $response['averageRating'],
+            'numberReviews' => $response['numberReviews'],
+            'percentageRecommendation' => $response['percentageRecommendation'],
+        ]);
 
-        collect(
-            $this->getLimit() == 1 ? $response['review_list'] : $response['review_list']['review']
-        )->each(function ($review) {
-            $this->reviews->push(new Review(
-                (new Collection($review))
-                    ->put('created_at', $review['customer']['date'] ?? null)
-                    ->filter()
-                    ->all()
-            ));
+        collect($response['reviews'])->each(function ($review) {
+            $this->reviews->push(
+                new Review($review)
+            );
         });
 
         return $this;
