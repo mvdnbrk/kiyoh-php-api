@@ -7,14 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Review extends Model
 {
     /**
-     * The name of the "updated at" column.
-     * Set to null to disable this column.
-     *
-     * @var string
-     */
-    const UPDATED_AT = null;
-
-    /**
      * The attributes that should be cast to native types.
      *
      * @var array
