@@ -22,6 +22,12 @@ class ImportCommandTest extends TestCase
         $this->artisan('kiyoh:import');
 
         $this->assertCount(3, Review::all());
+        tap(Review::first(), function ($review) {
+            $this->assertEquals('12345678-aaaa-0000-0000-000000000000', $review->review_id);
+            $this->assertEquals('10', $review->rating);
+            $this->assertEquals('2019-06-03 16:30:24', $review->created_at->toDateTimeString());
+            $this->assertEquals('2019-06-03 16:30:24', $review->updated_at->toDateTimeString());
+        });
     }
 
     /** @test */
