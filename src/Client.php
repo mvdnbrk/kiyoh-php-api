@@ -74,7 +74,7 @@ class Client
     protected function getFilters($filters)
     {
         return array_merge($filters, [
-            'connectorcode' => $this->apiKey,
+            'hash' => $this->apiKey,
         ]);
     }
 
