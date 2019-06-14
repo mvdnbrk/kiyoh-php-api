@@ -72,14 +72,14 @@ class Feed
             $this->getCompanyAttributes($response)
         );
 
-        collect($response->get('reviews'))
+        $response->only('reviews')->flatten(1)
             ->when(! $this->withMigrated, function ($collection) {
                 return $collection->reject(function ($review) {
                     return Str::startsWith($review['reviewId'], 'KIYNL-');
                 });
-            })->each(function ($review) {
+            })->each(function ($item) {
                 $this->reviews->push(
-                    new Review($review)
+                    new Review($this->getReviewAttributes($item))
                 );
             });
 
@@ -130,7 +130,7 @@ class Feed
      * @param  \Tightenco\Collect\Support\Collection  $collection
      * @return array
      */
-    protected function getCompanyAttributes($collection)
+    private function getCompanyAttributes($collection)
     {
         return $collection->intersectByKeys([
             'locationId' => '',
@@ -139,5 +139,43 @@ class Feed
             'numberReviews' => '',
             'percentageRecommendation' => '',
         ])->all();
+    }
+
+    /**
+     * Get the review attributes from the "reviewContent".
+     *
+     * @param  array  $value
+     * @return array
+     */
+    private function getReviewAttributes(array $array)
+    {
+        $attributes = collect($array)->only('reviewContent')->flatten(1)->mapWithKeys(function($item) {
+            if ($key = $this->lookupReviewContentAttribute($item['questionGroup'])) {
+                return [
+                    $key => $item['rating'],
+                ];
+            }
+
+            return [];
+        });
+
+        return collect($array)->forget('reviewContent')->merge($attributes)->all();
+    }
+
+    /**
+     * Lookup the attribute key for the given "questionGroup".
+     *
+     * @param  string  $value
+     * @return string
+     */
+    private function lookupReviewContentAttribute($value)
+    {
+        return collect([
+            'DEFAULT_RECOMMEND' => 'recommendation',
+            'DEFAULT_ONELINER' => 'headline',
+            'DEFAULT_OVERALL' => 'rating',
+            'DEFAULT_OPINION' => 'text',
+        ])
+        ->get($value);
     }
 }

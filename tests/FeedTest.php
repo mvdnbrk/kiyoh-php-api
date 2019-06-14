@@ -68,7 +68,9 @@ class FeedTest extends TestCase
         $this->assertCount(3, $feed->reviews);
         tap($feed->reviews->first(), function ($review) {
             $this->assertEquals('12345678-aaaa-0000-0000-000000000000', $review->uuid);
-            //$this->assertTrue($review->recommendation);
+            $this->assertTrue($review->recommendation);
+            $this->assertEquals('Oneliner. Lorem ipsum.', $review->headline);
+            $this->assertEquals('Opinion. Lorem ipsum.', $review->text);
             $this->assertSame(10, $review->rating);
             $this->assertEquals('John Doe', $review->author->name);
             $this->assertEquals('Amsterdam', $review->author->locality);
