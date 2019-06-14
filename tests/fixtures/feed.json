@@ -21,14 +21,14 @@
             {
                "questionGroup":"DEFAULT_ONELINER",
                "questionType":"TEXT",
-               "rating":"Lorem ipsum.",
+               "rating":"Oneliner. Lorem ipsum.",
                "order":0,
                "questionTranslation":"Beschrijf uw ervaring in een regel"
             },
             {
                "questionGroup":"DEFAULT_OPINION",
                "questionType":"TEXT",
-               "rating":"Lorem ipsum.",
+               "rating":"Opinion. Lorem ipsum.",
                "order":0,
                "questionTranslation":"Beschrijf uw ervaring"
             },
