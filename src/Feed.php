@@ -62,11 +62,15 @@ class Feed
      */
     public function get()
     {
-        $response = collect($this->apiClient->performHttpCall([
-            'limit' => $this->getLimit(),
-        ]));
+        $response = collect(
+            $this->apiClient->performHttpCall([
+                'limit' => $this->getLimit(),
+            ])
+        );
 
-        $this->company->fill($this->getCompanyAttributes($response));
+        $this->company->fill(
+            $this->getCompanyAttributes($response)
+        );
 
         collect($response->get('reviews'))
             ->when(! $this->withMigrated, function ($collection) {
