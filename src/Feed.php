@@ -62,19 +62,13 @@ class Feed
      */
     public function get()
     {
-        $response = $this->apiClient->performHttpCall([
+        $response = collect($this->apiClient->performHttpCall([
             'limit' => $this->getLimit(),
-        ]);
+        ]));
 
-        $this->company->fill([
-            'locationId' => $response['locationId'],
-            'locationName' => $response['locationName'],
-            'averageRating' => $response['averageRating'],
-            'numberReviews' => $response['numberReviews'],
-            'percentageRecommendation' => $response['percentageRecommendation'],
-        ]);
+        $this->company->fill($this->getCompanyAttributes($response));
 
-        collect($response['reviews'])
+        collect($response->get('reviews'))
             ->when(! $this->withMigrated, function ($collection) {
                 return $collection->reject(function ($review) {
                     return Str::startsWith($review['reviewId'], 'KIYNL-');
@@ -124,5 +118,22 @@ class Feed
         }
 
         return $this;
+    }
+
+    /**
+     * Get the company attributes from the collection.
+     *
+     * @param  \Tightenco\Collect\Support\Collection  $collection
+     * @return array
+     */
+    protected function getCompanyAttributes($collection)
+    {
+        return $collection->intersectByKeys([
+            'locationId' => '',
+            'locationName' => '',
+            'averageRating' => '',
+            'numberReviews' => '',
+            'percentageRecommendation' => '',
+        ])->all();
     }
 }
