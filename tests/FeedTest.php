@@ -3,12 +3,20 @@
 namespace Mvdnbrk\Kiyoh\Tests;
 
 use Mvdnbrk\Kiyoh\Feed;
+use GuzzleHttp\Psr7\Response;
 use Tightenco\Collect\Support\Collection;
+use Mvdnbrk\Kiyoh\Exceptions\KiyohException;
 
 class FeedTest extends TestCase
 {
     /** @test */
-    public function it_has_a_collection_of_reviews()
+    public function it_has_a_feed()
+    {
+        $this->assertInstanceOf(Feed::class, $this->client->feed);
+    }
+
+    /** @test */
+    public function the_feed_has_a_collection_of_reviews()
     {
         $this->assertInstanceOf(Collection::class, $this->client->feed->reviews);
     }
@@ -25,14 +33,6 @@ class FeedTest extends TestCase
         $this->client->feed->limit(999);
 
         $this->assertSame(999, $this->client->feed->getLimit());
-    }
-
-    /** @test */
-    public function it_can_set_the_limit_to_all()
-    {
-        $this->client->feed->all();
-
-        $this->assertSame('all', $this->client->feed->getLimit());
     }
 
     /** @test */
@@ -54,8 +54,35 @@ class FeedTest extends TestCase
     /** @test */
     public function it_can_get_the_feed()
     {
+        $response = new Response(200, [], file_get_contents('./tests/fixtures/feed.json'));
+        $this->guzzleClient->expects($this->once())->method('send')->willReturn($response);
+
         $feed = $this->client->feed->get();
 
-        $this->assertInstanceOf(Feed::class, $feed);
+        $this->assertSame(123456, $feed->company->id);
+        $this->assertEquals('MyCompany', $feed->company->name);
+        $this->assertSame(9.0, $feed->company->averageRating);
+        $this->assertSame(2500, $feed->company->reviewCount);
+        $this->assertSame(97, $feed->company->recommendationPercentage);
+
+        $this->assertCount(3, $feed->reviews);
+        tap($feed->reviews->first(), function ($review) {
+            $this->assertEquals('12345678-aaaa-0000-0000-000000000000', $review->uuid);
+            //$this->assertTrue($review->recommendation);
+            $this->assertSame(10, $review->rating);
+            $this->assertEquals('John Doe', $review->author->name);
+            $this->assertEquals('Amsterdam', $review->author->locality);
+            $this->assertEquals('2019-06-03T16:30:24.278Z', $review->created_at);
+            $this->assertEquals('2019-06-03T16:30:24.278Z', $review->updated_at);
+        });
+    }
+
+    /** @test */
+    public function it_throws_an_exception_when_no_response_is_received()
+    {
+        $this->expectException(KiyohException::class);
+        $this->expectExceptionMessage('No API response received.');
+
+        $feed = $this->client->feed->get();
     }
 }
