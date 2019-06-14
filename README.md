@@ -80,11 +80,38 @@ $feed->company->recommendationPercentage;
 
 ## Usage with Laravel
 
-Update your `.env` file by adding your company id and your connector code:
+Update your `.env` file by adding your KiyOh sercret hash:
 
 ```
 KIYOH_SECRET=YOUR-SECRET-HASH
 ```
+
+To create a `kiyoh_reviews` table in your database run the `migrate` command:
+
+```bash
+php artisan migrate
+```
+
+To import your reviews in the database run the `kiyoh:import` command:
+
+```bash
+php artisan kiyoh:import
+```
+
+The table name can be changed in the `kiyoh.php` config file.
+To publish the config file run:
+
+```bash
+php artisan vendor:publish --tag=kiyoh-config
+```
+
+To publish the migration file run:
+
+```bash
+php artisan vendor:publish --tag=kiyoh-migrations
+```
+
+To publish the 
 
 ## Testing
 

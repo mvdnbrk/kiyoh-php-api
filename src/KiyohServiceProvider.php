@@ -80,11 +80,11 @@ class KiyohServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__ . '/../config/kiyoh.php' => config_path('kiyoh.php')
-            ], 'config');
+            ], 'kiyoh-config');
 
             $this->publishes([
                 __DIR__.'/../database/migrations' => database_path('migrations'),
-            ], 'migrations');
+            ], 'kiyoh-migrations');
         }
     }
 
