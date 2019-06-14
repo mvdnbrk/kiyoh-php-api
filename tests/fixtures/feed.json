@@ -118,6 +118,36 @@
          ],
          "dateSince":"2019-06-01T09:00:25.127Z",
          "updatedSince":"2019-06-01T09:00:25.127Z"
+      },
+      {
+         "reviewId": "KIYNL-123456",
+         "reviewAuthor": "anoniem",
+         "rating": 10,
+         "reviewContent": [
+            {
+               "questionGroup": "DEFAULT_RECOMMEND",
+               "questionType": "BOOLEAN",
+               "rating": "true",
+               "order": 0,
+               "questionTranslation": "Zou u ons aanbevelen?"
+            },
+            {
+               "questionGroup": "DEFAULT_OVERALL",
+               "questionType": "INT",
+               "rating": "10",
+               "order": 0,
+               "questionTranslation": "Uw totaal oordeel"
+            },
+            {
+               "questionGroup": "DEFAULT_ONELINER",
+               "questionType": "TEXT",
+               "rating": "Lorem ipsum.",
+               "order": 0,
+               "questionTranslation": "Beschrijf uw ervaring in een regel"
+            }
+         ],
+         "dateSince": "2019-05-01T15:05:05Z",
+         "updatedSince": "2019-05-01T15:05:05Z"
       }
    ]
 }

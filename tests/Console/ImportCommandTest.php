@@ -23,4 +23,16 @@ class ImportCommandTest extends TestCase
 
         $this->assertCount(3, Review::all());
     }
+
+    /** @test */
+    public function it_can_import_migrated_reviews()
+    {
+        $this->swap(Client::class, $this->client);
+        $response = new Response(200, [], file_get_contents('./tests/fixtures/feed.json'));
+        $this->guzzleClient->expects($this->once())->method('send')->willReturn($response);
+
+        $this->artisan('kiyoh:import --with-migrated');
+
+        $this->assertCount(4, Review::all());
+    }
 }

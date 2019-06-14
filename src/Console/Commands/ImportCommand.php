@@ -15,7 +15,8 @@ class ImportCommand extends Command
      * @var string
      */
     protected $signature = 'kiyoh:import
-                            {--limit=10 : The maximum number of reviews to fetch}';
+                            {--limit=10 : The maximum number of reviews to fetch}
+                            {--with-migrated : Include migrated reviews in the feed}';
 
     /**
      * The console command description.
@@ -49,7 +50,7 @@ class ImportCommand extends Command
      */
     public function handle()
     {
-        $this->feed->limit($this->option('limit'));
+        $this->feed->withMigrated($this->option('with-migrated'))->limit($this->option('limit'));
 
         tap($this->feed->get()->reviews, function ($reviews) {
             $this->line('Importing KiyOh reviews');

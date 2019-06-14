@@ -78,6 +78,17 @@ class FeedTest extends TestCase
     }
 
     /** @test */
+    public function it_can_retrieve_the_feed_with_migrated_reviews()
+    {
+        $response = new Response(200, [], file_get_contents('./tests/fixtures/feed.json'));
+        $this->guzzleClient->expects($this->once())->method('send')->willReturn($response);
+
+        $feed = $this->client->feed->withMigrated()->get();
+
+        $this->assertCount(4, $feed->reviews);
+    }
+
+    /** @test */
     public function it_throws_an_exception_when_no_response_is_received()
     {
         $this->expectException(KiyohException::class);

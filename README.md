@@ -29,6 +29,7 @@ $client->setApiKey('your-secret-hash');
 ```
 
 ### Retrieve the KiyOh feed
+
 ```php
 $feed = $client->feed->get();
 ```
@@ -38,6 +39,13 @@ You may change the number of reviews to retrieve by using the `limit()` method:
 
 ```php
 $feed = $kiyoh->feed->limit(25)->get();
+```
+
+The migrated reviews from the previous KiyOh platform are not included by default.
+If you would like to retrieve the migrated reviews as well you may call the `withMigrated()` method:
+
+```php
+$feed = $kiyoh->feed->withMigrated()->get();
 ```
 
 ### Reviews

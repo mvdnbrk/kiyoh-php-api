@@ -3,6 +3,7 @@
 namespace Mvdnbrk\Kiyoh;
 
 use Mvdnbrk\Kiyoh\Client;
+use Mvdnbrk\Kiyoh\Support\Str;
 use Mvdnbrk\Kiyoh\Resources\Review;
 use Mvdnbrk\Kiyoh\Resources\Company;
 use Tightenco\Collect\Support\Collection;
@@ -22,10 +23,16 @@ class Feed
     protected $limit;
 
     /**
+     * Include migrated reviews. (defaults to false).
+     *
+     * @var bool
+     */
+    protected $withMigrated;
+
+    /**
      * @var \Mvdnbrk\Kiyoh\Resources\Company;
      */
     public $company;
-
 
     /**
      * @var \Tightenco\Collect\Support\Collection
@@ -42,6 +49,7 @@ class Feed
         $this->apiClient = $client;
 
         $this->limit = 10;
+        $this->withMigrated = false;
 
         $this->company = new Company();
         $this->reviews = new Collection();
@@ -66,11 +74,16 @@ class Feed
             'percentageRecommendation' => $response['percentageRecommendation'],
         ]);
 
-        collect($response['reviews'])->each(function ($review) {
-            $this->reviews->push(
-                new Review($review)
-            );
-        });
+        collect($response['reviews'])
+            ->when(! $this->withMigrated, function ($collection) {
+                return $collection->reject(function ($review) {
+                    return Str::startsWith($review['reviewId'], 'KIYNL-');
+                });
+            })->each(function ($review) {
+                $this->reviews->push(
+                    new Review($review)
+                );
+            });
 
         return $this;
     }
@@ -83,6 +96,19 @@ class Feed
     public function getLimit()
     {
         return $this->limit;
+    }
+
+    /**
+     * Include migrated reviews in the feed.
+     *
+     * @param  bool  $value
+     * @return $this
+     */
+    public function withMigrated($value = true)
+    {
+        $this->withMigrated = (bool) $value;
+
+        return $this;
     }
 
     /**
