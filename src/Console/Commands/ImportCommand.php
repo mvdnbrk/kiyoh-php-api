@@ -15,8 +15,7 @@ class ImportCommand extends Command
      * @var string
      */
     protected $signature = 'kiyoh:import
-                            {--limit=10 : The maximum number of reviews to fetch}
-                            {--all : Fetch all reviews}';
+                            {--limit=10 : The maximum number of reviews to fetch}';
 
     /**
      * The console command description.
@@ -38,9 +37,9 @@ class ImportCommand extends Command
      */
     public function __construct(Client $client)
     {
-        parent::__construct();
-
         $this->feed = $client->feed;
+
+        parent::__construct();
     }
 
     /**
@@ -52,10 +51,6 @@ class ImportCommand extends Command
     {
         $this->feed->limit($this->option('limit'));
 
-        if ($this->option('all')) {
-            $this->feed->all();
-        }
-
         tap($this->feed->get()->reviews, function ($reviews) {
             $this->line('Importing KiyOh reviews');
             $this->output->newLine();
@@ -64,11 +59,8 @@ class ImportCommand extends Command
 
             $reviews->each(function ($review) {
                 Review::updateOrCreate([
-                    'company_id' => config('kiyoh.id'),
-                    'review_id' => $review->id
+                    'review_id' => $review->uuid
                 ], [
-                    'company_id' => config('kiyoh.id'),
-                    'review_id' => $review->id,
                     'rating' => $review->rating,
                     'payload' => $review->toArray(),
                     'created_at' => Carbon::parse($review->created_at),
