@@ -16,7 +16,6 @@ class MigrationTest extends TestCase
     {
         $columns = Schema::getColumnListing('kiyoh_reviews');
 
-        $this->assertTrue(Schema::hasTable('kiyoh_reviews'));
         $this->assertEquals([
             'id',
             'review_id',
