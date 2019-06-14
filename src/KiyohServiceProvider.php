@@ -35,9 +35,7 @@ class KiyohServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/../config/kiyoh.php', 'kiyoh');
 
         $this->app->singleton(Client::class, function () {
-            return (new Client())->setCompanyId(
-                config('kiyoh.id')
-            )->setApiKey(
+            return (new Client())->setApiKey(
                 config('kiyoh.secret')
             );
         });
