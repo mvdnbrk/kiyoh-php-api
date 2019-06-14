@@ -96,7 +96,7 @@ class Client
         ));
 
         try {
-            $response = $this->httpClient->send($request);
+            $response = $this->httpClient->send($request, ['http_errors' => false]);
         } catch (GuzzleException $e) {
             throw new KiyohException($e->getMessage(), $e->getCode());
         }
@@ -124,8 +124,8 @@ class Client
             throw new KiyohException("Unable to decode response: '{$body}'.");
         }
 
-        if (isset($object['error'])) {
-            throw new KiyohException($object['error']);
+        if (isset($object['httpCode'])) {
+            throw new KiyohException($object['detailedError']['message'], $object['httpCode']);
         }
 
         return $object;
