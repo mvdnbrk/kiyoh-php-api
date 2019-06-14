@@ -96,4 +96,16 @@ class FeedTest extends TestCase
 
         $feed = $this->client->feed->get();
     }
+
+    /** @test */
+    public function it_throws_an_exception_when_the_reponse_has_a_malformed_json()
+    {
+        $this->expectException(KiyohException::class);
+        $this->expectExceptionMessage("Unable to decode response: '{'malformed': 'json'}'");
+
+        $response = new Response(200, [], "{'malformed': 'json'}");
+        $this->guzzleClient->expects($this->once())->method('send')->willReturn($response);
+
+        $feed = $this->client->feed->get();
+    }
 }
