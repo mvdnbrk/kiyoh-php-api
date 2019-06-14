@@ -28,6 +28,26 @@ class Author extends BaseResource
     }
 
     /**
+     * Get "city" attribute for this review.
+     *
+     * @return string
+     */
+    public function getCityAttribute()
+    {
+        return $this->locality;
+    }
+
+    /**
+     * Get "reviewAuthor" attribute for this review.
+     *
+     * @return string
+     */
+    public function getReviewAuthorAttribute()
+    {
+        return $this->name;
+    }
+
+    /**
      * Determine if the author has a name.
      *
      * @return bool
@@ -38,7 +58,7 @@ class Author extends BaseResource
     }
 
     /**
-     * Determine if the author has a name.
+     * Determine if the author has a locality.
      *
      * @return bool
      */
@@ -83,8 +103,19 @@ class Author extends BaseResource
      * @param  string  $value
      * @return void
      */
-    public function setPlaceAttribute($value)
+    public function setCityAttribute($value)
     {
         $this->setLocalityAttribute($value);
+    }
+
+    /**
+     * Alias for setNameAttribute().
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setReviewAuthorAttribute($value)
+    {
+        $this->setNameAttribute($value);
     }
 }

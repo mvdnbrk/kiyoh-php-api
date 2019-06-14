@@ -5,9 +5,9 @@ namespace Mvdnbrk\Kiyoh\Resources;
 class Review extends BaseResource
 {
     /**
-     * @var int
+     * @var string
      */
-    public $id;
+    public $uuid;
 
     /**
      * @var \Mvdnbrk\Kiyoh\Resources;
@@ -15,29 +15,14 @@ class Review extends BaseResource
     public $author;
 
     /**
-     * @var string
-     */
-    public $comment_negative;
-
-    /**
-     * @var string
-     */
-    public $comment_positive;
-
-    /**
      * @var bool
      */
-    public $recommendation;
-
-    /**
-     * @var string
-     */
-    public $response;
+    protected $recommendation;
 
     /**
      * @var int
      */
-    public $rating;
+    protected $rating;
 
     /**
      * @var string
@@ -45,9 +30,9 @@ class Review extends BaseResource
     public $created_at;
 
     /**
-     * @var mixed
+     * @var string
      */
-    public $meta;
+    public $updated_at;
 
     /**
      * Create a new Review instance.
@@ -56,16 +41,18 @@ class Review extends BaseResource
      */
     public function __construct($attributes = [])
     {
+        $this->recommendation = false;
+
         parent::__construct($attributes);
 
-        $this->author = new Author(array_merge(
-            $attributes['author'] ?? [],
-            $attributes['customer'] ?? []
-        ));
+        $this->author = new Author(array_merge([
+            'reviewAuthor' => $attributes['reviewAuthor'] ?? '',
+            'city' => $attributes['city'] ?? '',
+        ], $attributes['author'] ?? []));
     }
 
     /**
-     * Get created at date for this review.,
+     * Get "createdAt" attribute for this review.
      *
      * @return string
      */
@@ -75,97 +62,56 @@ class Review extends BaseResource
     }
 
     /**
-     * Get the negative comment.
+     * Get "updatedAt" attribute for this review.
      *
      * @return string
      */
-    public function getNegativeCommentAttribute()
+    public function getUpdatedAtAttribute()
     {
-        return $this->comment_negative;
+        return $this->updated_at;
     }
 
     /**
-     * Get the positive comment.
+     * Get "reviewId" attribute for this review.
      *
      * @return string
      */
-    public function getPositiveCommentAttribute()
+    public function getReviewIdAttribute()
     {
-        return $this->comment_positive;
+        return $this->uuid;
     }
 
     /**
-     * Determine if the review has a response from the company.
-     *
-     * @return bool
-     */
-    public function hasResponse()
-    {
-        return ! empty($this->response);
-    }
-
-    /**
-     * Determine if the review has a positive comment.
-     *
-     * @return bool
-     */
-    public function hasPositiveComment()
-    {
-        return ! empty($this->comment_positive);
-    }
-
-    /**
-     * Determine if the review has a positive comment.
-     *
-     * @return bool
-     */
-    public function hasNegativeComment()
-    {
-        return ! empty($this->comment_negative);
-    }
-
-    /**
-     * Set the id for this review.
-     *
-     * @param  int|string  $value
-     * @return void
-     */
-    public function setIdAttribute($value)
-    {
-        $this->id = (int) $value;
-    }
-
-    /**
-     * Alias 'extra_options' to the 'meta' attribute.
-     *
-     * @param  mixed  $value
-     * @return void
-     */
-    public function setExtraOptionsAttribute($value)
-    {
-        $this->meta = $value;
-    }
-
-    /**
-     * Alias 'positive' to the 'comment_positive' attribute.
+     * Alias "dateSince" to the "created_at" attribute.
      *
      * @param  string  $value
      * @return void
      */
-    public function setPositiveAttribute($value)
+    public function setDateSinceAttribute($value)
     {
-        $this->comment_positive = htmlspecialchars($value);
+        $this->created_at = $value;
     }
 
     /**
-     * Alias 'negative' to the 'comment_negative' attribute.
+     * Alias "reviewId" to the "uuid" attribute.
      *
      * @param  string  $value
      * @return void
      */
-    public function setNegativeAttribute($value)
+    public function setReviewIdAttribute($value)
     {
-        $this->comment_negative = htmlspecialchars($value);
+        $this->uuid = $value;
+    }
+
+    /**
+     * Alias "updatedSince" to the "updated_at" attribute.
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setUpdatedSinceAttribute($value)
+    {
+        $this->updated_at = $value;
     }
 
     /**
@@ -180,17 +126,6 @@ class Review extends BaseResource
     }
 
     /**
-     * Alias 'reaction' to the 'respone' attribute.
-     *
-     * @param  string  $value
-     * @return void
-     */
-    public function setReactionAttribute($value)
-    {
-        $this->response = htmlspecialchars($value);
-    }
-
-    /**
      * Set the recommendation for this review.
      *
      * @param  bool|string  $value
@@ -198,25 +133,7 @@ class Review extends BaseResource
      */
     public function setRecommendationAttribute($value)
     {
-        $this->recommendation = collect([
-            'Ja' => true,
-            'Yes' => true,
-            '1' => true,
-            'Nee' => false,
-            'No' => false,
-            '0' => false,
-        ])->get($value);
-    }
-
-    /**
-     * Alias for setRatingAttribute().
-     *
-     * @param  int|string  $value
-     * @return void
-     */
-    public function setTotalScoreAttribute($value)
-    {
-        $this->setRatingAttribute($value);
+        $this->recommendation = filter_var($value, FILTER_VALIDATE_BOOLEAN);
     }
 
     /**
