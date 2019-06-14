@@ -1,0 +1,9 @@
+{
+    "httpCode": 400,
+    "errorCode": "INTERNAL_SERVER_ERROR",
+    "id": "12345678-abcd-abcd-abcd-1234567890",
+    "detailedError": [{
+        "errorCode": "INVALID_HASH",
+        "message": "Invalid hash"
+    }]
+}

@@ -1,0 +1,129 @@
+<ReviewFeedDto xmlns="">
+  <averageRating>9.0</averageRating>
+  <numberReviews>3</numberReviews>
+  <percentageRecommendation>97</percentageRecommendation>
+  <locationId>1234567</locationId>
+  <locationName>MyCompany</locationName>
+  <reviews>
+    <reviews>
+      <reviewId>12345678-aaaa-0000-0000-000000000000</reviewId>
+      <reviewAuthor>John Doe</reviewAuthor>
+      <city>Amsterdam</city>
+      <rating>10</rating>
+      <reviewContent>
+        <reviewContent>
+          <questionGroup>DEFAULT_OVERALL</questionGroup>
+          <questionType>INT</questionType>
+          <rating>10</rating>
+          <order>0</order>
+          <questionTranslation>Uw totaal oordeel</questionTranslation>
+        </reviewContent>
+        <reviewContent>
+          <questionGroup>DEFAULT_ONELINER</questionGroup>
+          <questionType>TEXT</questionType>
+          <rating>lorem ipsum</rating>
+          <order>0</order>
+          <questionTranslation>Beschrijf uw ervaring in een regel</questionTranslation>
+        </reviewContent>
+        <reviewContent>
+          <questionGroup>DEFAULT_OPINION</questionGroup>
+          <questionType>TEXT</questionType>
+          <rating>lorem ipsum</rating>
+          <order>0</order>
+          <questionTranslation>Beschrijf uw ervaring</questionTranslation>
+        </reviewContent>
+        <reviewContent>
+          <questionGroup>DEFAULT_RECOMMEND</questionGroup>
+          <questionType>BOOLEAN</questionType>
+          <rating>true</rating>
+          <order>0</order>
+          <questionTranslation>Zou u ons aanbevelen?</questionTranslation>
+        </reviewContent>
+      </reviewContent>
+      <dateSince>2019-06-03T16:00:24.278Z</dateSince>
+      <updatedSince>2019-06-03T16:00:24.278Z</updatedSince>
+    </reviews>
+    <reviews>
+      <reviewId>12345678-bbbb-0000-0000-000000000000</reviewId>
+      <reviewAuthor>Jane Doe</reviewAuthor>
+      <city>Rotterdam</city>
+      <rating>9</rating>
+      <reviewContent>
+        <reviewContent>
+          <questionGroup>DEFAULT_OVERALL</questionGroup>
+          <questionType>INT</questionType>
+          <rating>8</rating>
+          <order>0</order>
+          <questionTranslation>Uw totaal oordeel</questionTranslation>
+        </reviewContent>
+        <reviewContent>
+          <questionGroup>DEFAULT_ONELINER</questionGroup>
+          <questionType>TEXT</questionType>
+          <rating>Lorem ipsum</rating>
+          <order>0</order>
+          <questionTranslation>Beschrijf uw ervaring in een regel</questionTranslation>
+        </reviewContent>
+        <reviewContent>
+          <questionGroup>DEFAULT_OPINION</questionGroup>
+          <questionType>TEXT</questionType>
+          <rating>Lorem ipsum</rating>
+          <order>0</order>
+          <questionTranslation>Beschrijf uw ervaring</questionTranslation>
+        </reviewContent>
+        <reviewContent>
+          <questionGroup>DEFAULT_RECOMMEND</questionGroup>
+          <questionType>BOOLEAN</questionType>
+          <rating>true</rating>
+          <order>0</order>
+          <questionTranslation>Zou u ons aanbevelen?</questionTranslation>
+        </reviewContent>
+      </reviewContent>
+      <dateSince>2019-06-02T04:10:54.371Z</dateSince>
+      <updatedSince>2019-06-02T04:10:54.371Z</updatedSince>
+    </reviews>
+    <reviews>
+      <reviewId>12345678-cccc-0000-0000-000000000000</reviewId>
+      <reviewAuthor>Mark</reviewAuthor>
+      <city>Utrecht</city>
+      <rating>1</rating>
+      <reviewContent>
+        <reviewContent>
+          <questionGroup>DEFAULT_OVERALL</questionGroup>
+          <questionType>INT</questionType>
+          <rating>1</rating>
+          <order>0</order>
+          <questionTranslation>Uw totaal oordeel</questionTranslation>
+        </reviewContent>
+        <reviewContent>
+          <questionGroup>DEFAULT_ONELINER</questionGroup>
+          <questionType>TEXT</questionType>
+          <rating>Lorem ipsum</rating>
+          <order>0</order>
+          <questionTranslation>Beschrijf uw ervaring in een regel</questionTranslation>
+        </reviewContent>
+        <reviewContent>
+          <questionGroup>DEFAULT_OPINION</questionGroup>
+          <questionType>TEXT</questionType>
+          <rating>Lorem ipsum.
+
+Lorem ipsum.
+
+Lorem ipsum.
+
+Lorem ipsum.</rating>
+          <order>0</order>
+          <questionTranslation>Beschrijf uw ervaring</questionTranslation>
+        </reviewContent>
+        <reviewContent>
+          <questionGroup>DEFAULT_RECOMMEND</questionGroup>
+          <questionType>BOOLEAN</questionType>
+          <rating>false</rating>
+          <order>0</order>
+          <questionTranslation>Zou u ons aanbevelen?</questionTranslation>
+        </reviewContent>
+      </reviewContent>
+      <dateSince>2019-06-01T09:31:25.127Z</dateSince>
+      <updatedSince>2019-06-01T09:31:25.127Z</updatedSince>
+    </reviews>
+  </reviews>
+</ReviewFeedDto>

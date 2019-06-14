@@ -1,0 +1,123 @@
+{
+   "averageRating":9.0,
+   "numberReviews":3,
+   "percentageRecommendation":97,
+   "locationId":"123456",
+   "locationName":"MyCompany",
+   "reviews":[
+      {
+         "reviewId":"12345678-aaaa-0000-0000-000000000000",
+         "reviewAuthor":"John Doe",
+         "city":"Amsterdam",
+         "rating":10,
+         "reviewContent": [
+            {
+               "questionGroup":"DEFAULT_OVERALL",
+               "questionType":"INT",
+               "rating":"10",
+               "order":0,
+               "questionTranslation":"Uw totaal oordeel"
+            },
+            {
+               "questionGroup":"DEFAULT_ONELINER",
+               "questionType":"TEXT",
+               "rating":"Lorem ipsum.",
+               "order":0,
+               "questionTranslation":"Beschrijf uw ervaring in een regel"
+            },
+            {
+               "questionGroup":"DEFAULT_OPINION",
+               "questionType":"TEXT",
+               "rating":"Lorem ipsum.",
+               "order":0,
+               "questionTranslation":"Beschrijf uw ervaring"
+            },
+            {
+               "questionGroup":"DEFAULT_RECOMMEND",
+               "questionType":"BOOLEAN",
+               "rating":"true",
+               "order":0,
+               "questionTranslation":"Zou u ons aanbevelen?"
+            }
+         ],
+         "dateSince":"2019-06-03T16:30:24.278Z",
+         "updatedSince":"2019-06-03T16:30:24.278Z"
+      },
+      {
+         "reviewId":"12345678-bbbb-0000-0000-000000000000",
+         "reviewAuthor":"Jane Doe",
+         "city":"Rotterdam",
+         "rating":9,
+         "reviewContent": [
+            {
+               "questionGroup":"DEFAULT_OVERALL",
+               "questionType":"INT",
+               "rating":"8",
+               "order":0,
+               "questionTranslation":"Uw totaal oordeel"
+            },
+            {
+               "questionGroup":"DEFAULT_ONELINER",
+               "questionType":"TEXT",
+               "rating":"Goede en snelle levering",
+               "order":0,
+               "questionTranslation":"Beschrijf uw ervaring in een regel"
+            },
+            {
+               "questionGroup":"DEFAULT_OPINION",
+               "questionType":"TEXT",
+               "rating":"Lorem ipsum.",
+               "order":0,
+               "questionTranslation":"Beschrijf uw ervaring"
+            },
+            {
+               "questionGroup":"DEFAULT_RECOMMEND",
+               "questionType":"BOOLEAN",
+               "rating":"true",
+               "order":0,
+               "questionTranslation":"Zou u ons aanbevelen?"
+            }
+         ],
+         "dateSince":"2019-06-02T04:30:54.371Z",
+         "updatedSince":"2019-06-02T04:30:54.371Z"
+      },
+      {
+         "reviewId":"12345678-cccc-0000-0000-000000000000",
+         "reviewAuthor":"Mark",
+         "city":"Utrecht",
+         "rating":1,
+         "reviewContent":[
+            {
+               "questionGroup":"DEFAULT_OVERALL",
+               "questionType":"INT",
+               "rating":"9",
+               "order":0,
+               "questionTranslation":"Uw totaal oordeel"
+            },
+            {
+               "questionGroup":"DEFAULT_ONELINER",
+               "questionType":"TEXT",
+               "rating":"Uitstekende dienstverlening",
+               "order":0,
+               "questionTranslation":"Beschrijf uw ervaring in een regel"
+            },
+            {
+               "questionGroup":"DEFAULT_OPINION",
+               "questionType":"TEXT",
+               "rating":"Lorem ipsum.\n\nLorem ispum.\n\nLorem ipsum.",
+               "order":0,
+               "questionTranslation":"Beschrijf uw ervaring"
+            },
+            {
+               "questionGroup":"DEFAULT_RECOMMEND",
+               "questionType":"BOOLEAN",
+               "rating":"false",
+               "order":0,
+               "questionTranslation":"Zou u ons aanbevelen?"
+            }
+         ],
+         "dateSince":"2019-06-01T09:00:25.127Z",
+         "updatedSince":"2019-06-01T09:00:25.127Z"
+      }
+   ]
+}

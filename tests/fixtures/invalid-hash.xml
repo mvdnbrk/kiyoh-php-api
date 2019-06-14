@@ -1,0 +1,9 @@
+<error xmlns="">
+    <httpCode>400</httpCode>
+    <errorCode>INTERNAL_SERVER_ERROR</errorCode>
+    <id>cb55c352-a260-400e-80c9-733715b75916</id>
+    <detailedError>
+        <errorCode>INVALID_HASH</errorCode>
+        <message>Invalid hash</message>
+    </detailedError>
+</error>
