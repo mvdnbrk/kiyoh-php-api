@@ -64,6 +64,7 @@ class ImportCommand extends Command
                     'rating' => $review->rating,
                     'payload' => $review->toArray(),
                     'created_at' => Carbon::parse($review->created_at),
+                    'updated_at' => Carbon::parse($review->updated_at),
                 ]);
 
                 $this->output->progressAdvance();
