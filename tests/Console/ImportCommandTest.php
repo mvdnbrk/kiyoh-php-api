@@ -41,4 +41,20 @@ class ImportCommandTest extends TestCase
 
         $this->assertCount(4, Review::all());
     }
+
+    /** @test */
+    public function payload_does_not_have_all_attributes()
+    {
+        $this->swap(Client::class, $this->client);
+        $response = new Response(200, [], file_get_contents('./tests/fixtures/feed.json'));
+        $this->guzzleClient->expects($this->once())->method('send')->willReturn($response);
+
+        $this->artisan('kiyoh:import');
+
+        tap(Review::first(), function ($review) {
+            $this->assertArrayNotHasKey('uuid', $review->payload);
+            $this->assertArrayNotHasKey('created_at', $review->payload);
+            $this->assertArrayNotHasKey('updated_at', $review->payload);
+        });
+    }
 }
