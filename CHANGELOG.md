@@ -4,6 +4,11 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+## [v2.1.0] - 2019-06-15
+
+### Changed
+- Save the recommendation of a review in it's own column. [`f2f502b`](https://github.com/mvdnbrk/kiyoh-php-api/commit/f2f502b02a1986e9dd6a6674810de91d06d8792d)
+
 ## [v2.0.2] - 2019-06-15
 
 - Sort reviews by creation date before importing. [`75c6306`](https://github.com/mvdnbrk/kiyoh-php-api/commit/75c6306e193fb9953501f03d637642735d770f1b)
@@ -79,7 +84,8 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ### Initial realease
 
-[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.0.2...HEAD
+[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.1.0...HEAD
+[v2.1.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.0.2...v2.1.0
 [v2.0.2]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.0.1...v2.0.2
 [v2.0.1]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.0.0...v2.0.1
 [v2.0.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.2.3...v2.0.0
