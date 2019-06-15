@@ -4,6 +4,11 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+## [v2.0.1] - 2019-06-15
+
+### Changed
+- Removed rating attribute from the payload. [`a554d6d`](https://github.com/mvdnbrk/kiyoh-php-api/commit/a554d6d88212eefde2d23fbf9f0300a0ae8f7081)
+
 ## [v2.0.0] - 2019-06-15
 
 ### Changed
@@ -70,7 +75,8 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ### Initial realease
 
-[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.0.1...HEAD
+[v2.0.1]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.0.0...v2.0.1
 [v2.0.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.2.3...v2.0.0
 [v1.2.3]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.2.2...v1.2.3
 [v1.2.2]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v1.2.1...v1.2.2
