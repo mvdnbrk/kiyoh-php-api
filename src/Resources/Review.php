@@ -49,7 +49,7 @@ class Review extends BaseResource
      *
      * @param  array  $attributes
      */
-    public function __construct($attributes = [])
+    public function __construct(array $attributes = [])
     {
         $this->recommendation = false;
 
