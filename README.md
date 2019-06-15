@@ -10,12 +10,14 @@
 
 Simple PHP API to fetch your KiyOh reviews from the XML feed.
 
+**This branch uses the old KiyOh feed, for the latest feed use the [2.0 branch](https://github.com/mvdnbrk/kiyoh-php-api/tree/2.0).**
+
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require mvdnbrk/kiyoh-php-api
+composer require mvdnbrk/kiyoh-php-api "^1.2"
 ```
 
 ## Getting started
