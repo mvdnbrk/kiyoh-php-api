@@ -38,6 +38,13 @@
                "rating":"true",
                "order":0,
                "questionTranslation":"Zou u ons aanbevelen?"
+            },
+            {
+               "questionGroup":"UNKNOWN",
+               "questionType":"BOOLEAN",
+               "rating":"true",
+               "order":0,
+               "questionTranslation":"unknown"
             }
          ],
          "dateSince":"2019-06-03T16:30:24.278Z",
