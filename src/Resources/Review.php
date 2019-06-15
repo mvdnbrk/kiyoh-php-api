@@ -17,7 +17,7 @@ class Review extends BaseResource
     /**
      * @var string
      */
-    public $headline;
+    protected $headline;
 
     /**
      * @var bool
@@ -27,7 +27,7 @@ class Review extends BaseResource
     /**
      * @var string
      */
-    public $text;
+    protected $text;
 
     /**
      * @var int
@@ -103,6 +103,17 @@ class Review extends BaseResource
     }
 
     /**
+     * Set the headline for this review.
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setHeadlineAttribute($value)
+    {
+        $this->headline = trim($value);
+    }
+
+    /**
      * Alias "reviewId" to the "uuid" attribute.
      *
      * @param  string  $value
@@ -111,6 +122,17 @@ class Review extends BaseResource
     public function setReviewIdAttribute($value)
     {
         $this->uuid = $value;
+    }
+
+    /**
+     * Set the text for this review.
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setTextAttribute($value)
+    {
+        $this->text = trim($value);
     }
 
     /**

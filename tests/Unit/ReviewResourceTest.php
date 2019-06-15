@@ -50,6 +50,26 @@ class ReviewResourceTest extends TestCase
     }
 
     /** @test */
+    public function it_trims_the_headline()
+    {
+        $review = new Review([
+            'headline' => 'Lorem   ',
+        ]);
+
+        $this->assertEquals('Lorem', $review->headline);
+    }
+
+    /** @test */
+    public function it_trims_the_text()
+    {
+        $review = new Review([
+            'text' => 'Lorem   ',
+        ]);
+
+        $this->assertEquals('Lorem', $review->text);
+    }
+
+    /** @test */
     public function it_can_set_the_recommendation()
     {
         $review = new Review();
