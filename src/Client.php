@@ -126,7 +126,7 @@ class Client
         }
 
         if (isset($object['httpCode'])) {
-            throw new KiyohException($object['detailedError']['message'], $object['httpCode']);
+            throw new KiyohException($object['detailedError'][0]['message'], $object['httpCode']);
         }
 
         return $object;

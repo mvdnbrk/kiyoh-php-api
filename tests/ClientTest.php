@@ -29,7 +29,7 @@ class ClientTest extends TestCase
     /** @test */
     public function performing_an_http_call_with_invalid_credentials_throws_an_error()
     {
-        $response = new Response(400, [], file_get_contents('./tests/fixtures/invalid-hash.xml'));
+        $response = new Response(400, [], file_get_contents('./tests/fixtures/invalid-hash.json'));
         $this->guzzleClient->expects($this->once())->method('send')->willReturn($response);
 
         $this->expectException(KiyohException::class);
