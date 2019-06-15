@@ -63,7 +63,7 @@ class ImportCommand extends Command
                     'review_id' => $review->uuid
                 ], [
                     'rating' => $review->rating,
-                    'payload' => $review->toArray(),
+                    'payload' => $this->preparePayload($review),
                     'created_at' => Carbon::parse($review->created_at),
                     'updated_at' => Carbon::parse($review->updated_at),
                 ]);
@@ -73,5 +73,20 @@ class ImportCommand extends Command
 
             $this->output->progressFinish();
         });
+    }
+
+    /**
+     * Prepare the review payload.
+     *
+     * @param  \Mvdnbrk\Kiyoh\Resources\Review  $review
+     * @return array
+     */
+    protected function preparePayload($review)
+    {
+        return collect($review->toArray())->forget([
+            'uuid',
+            'created_at',
+            'updated_at',
+        ]);
     }
 }
