@@ -85,6 +85,7 @@ class ImportCommand extends Command
     {
         return collect($review->toArray())->forget([
             'uuid',
+            'rating',
             'created_at',
             'updated_at',
         ]);

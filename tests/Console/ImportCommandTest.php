@@ -53,6 +53,7 @@ class ImportCommandTest extends TestCase
 
         tap(Review::first(), function ($review) {
             $this->assertArrayNotHasKey('uuid', $review->payload);
+            $this->assertArrayNotHasKey('rating', $review->payload);
             $this->assertArrayNotHasKey('created_at', $review->payload);
             $this->assertArrayNotHasKey('updated_at', $review->payload);
         });
