@@ -20,6 +20,7 @@ class MigrationTest extends TestCase
             'id',
             'review_id',
             'rating',
+            'recommendation',
             'payload',
             'created_at',
             'updated_at',

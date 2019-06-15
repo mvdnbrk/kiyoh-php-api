@@ -13,6 +13,7 @@ class Review extends Model
      */
     protected $casts = [
         'payload' => 'array',
+        'recommendation' => 'boolean',
     ];
 
     /**

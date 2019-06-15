@@ -63,6 +63,7 @@ class ImportCommand extends Command
                     'review_id' => $review->uuid
                 ], [
                     'rating' => $review->rating,
+                    'recommendation' => $review->recommendation,
                     'payload' => $this->preparePayload($review),
                     'created_at' => Carbon::parse($review->created_at),
                     'updated_at' => Carbon::parse($review->updated_at),
@@ -86,6 +87,7 @@ class ImportCommand extends Command
         return collect($review->toArray())->forget([
             'uuid',
             'rating',
+            'recommendation',
             'created_at',
             'updated_at',
         ]);

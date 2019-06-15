@@ -16,6 +16,7 @@ class ReviewModelTest extends TestCase
         $review = Review::create([
             'review_id' => '1234-aaaa-1234-aaaa',
             'rating' => '10',
+            'recommendation' => '1',
             'payload' => [],
         ]);
 
@@ -23,6 +24,7 @@ class ReviewModelTest extends TestCase
         tap(Review::first(), function ($review) {
             $this->assertEquals('1234-aaaa-1234-aaaa', $review->review_id);
             $this->assertEquals('10', $review->rating);
+            $this->assertTrue($review->recommendation);
             $this->assertSame([], $review->payload);
         });
     }
