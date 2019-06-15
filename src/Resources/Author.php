@@ -7,12 +7,12 @@ class Author extends BaseResource
     /**
      * @var string
      */
-    public $name;
+    protected $name;
 
     /**
      * @var string
      */
-    public $locality;
+    protected $locality;
 
     /**
      * Create a new Author instance.
