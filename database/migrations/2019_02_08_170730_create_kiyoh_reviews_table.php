@@ -34,7 +34,7 @@ class CreateKiyohReviewsTable extends Migration
             $table->bigIncrements('id');
             $table->uuid('review_id')->unique();
             $table->unsignedTinyInteger('rating');
-            $table->boolean('recommendation');
+            $table->boolean('recommendation')->default(true);
             $table->json('payload');
             $table->timestamps();
         });
