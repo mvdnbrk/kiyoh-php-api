@@ -58,7 +58,7 @@ class ImportCommand extends Command
 
             $this->output->progressStart($reviews->count());
 
-            $reviews->each(function ($review) {
+            $reviews->sortBy('created_at')->each(function ($review) {
                 Review::updateOrCreate([
                     'review_id' => $review->uuid
                 ], [
