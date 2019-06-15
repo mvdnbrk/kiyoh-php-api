@@ -4,6 +4,9 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+- Set a default value for recommendation. [`fba5515`](https://github.com/mvdnbrk/kiyoh-php-api/commit/fba5515bc9a334d6d12538841072aaa91b589400)
+
 ## [v2.1.0] - 2019-06-15
 
 ### Changed
