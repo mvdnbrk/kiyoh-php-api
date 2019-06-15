@@ -36,6 +36,26 @@ class AuthorTest extends TestCase
     }
 
     /** @test */
+    public function it_trims_the_name()
+    {
+        $author = new Author([
+            'name' => 'John   ',
+        ]);
+
+        $this->assertEquals('John', $author->name);
+    }
+
+    /** @test */
+    public function it_trims_the_locality()
+    {
+        $author = new Author([
+            'locality' => 'Amsterdam   ',
+        ]);
+
+        $this->assertEquals('Amsterdam', $author->locality);
+    }
+
+    /** @test */
     public function it_has_aliases_for_properties()
     {
         $author = new Author([
