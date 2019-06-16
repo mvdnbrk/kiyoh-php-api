@@ -4,6 +4,12 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+## [v2.2.0] - 2019-06-16
+
+### Added
+- Added function hasText() to Review. [`f106685`](https://github.com/mvdnbrk/kiyoh-php-api/commit/f106685b41874bb4a8f1e7c11eb897624f1bb800)
+- Added function hasHeadline() to Review. [`eaf6ea4`](https://github.com/mvdnbrk/kiyoh-php-api/commit/eaf6ea44bb39c071fc28082682289577c9331e81)
+
 ### Changed
 - Set a default value for recommendation. [`fba5515`](https://github.com/mvdnbrk/kiyoh-php-api/commit/fba5515bc9a334d6d12538841072aaa91b589400)
 
@@ -87,7 +93,8 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ### Initial realease
 
-[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.1.0...HEAD
+[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.2.0...HEAD
+[v2.2.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.1.0...v2.2.0
 [v2.1.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.0.2...v2.1.0
 [v2.0.2]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.0.1...v2.0.2
 [v2.0.1]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.0.0...v2.0.1
