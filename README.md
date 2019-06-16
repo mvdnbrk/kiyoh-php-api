@@ -62,10 +62,8 @@ $feed->reviews->each(function ($review) {
     $review->createdAt;
     $review->updatedAt;
 
-    // author
     $review->author->hasName();
     $review->author->name;
-
     $review->author->hasLocality();
     $review->author->locality;
 
