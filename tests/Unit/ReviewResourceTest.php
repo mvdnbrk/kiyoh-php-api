@@ -90,6 +90,18 @@ class ReviewResourceTest extends TestCase
     }
 
     /** @test */
+    public function it_can_determine_if_it_has_a_headline()
+    {
+        $review = new Review();
+
+        $this->assertFalse($review->hasHeadline());
+
+        $review->headline = 'Lorem.';
+
+        $this->assertTrue($review->hasHeadline());
+    }
+
+    /** @test */
     public function converting_to_an_array()
     {
         $review = new Review([
