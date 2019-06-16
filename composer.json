@@ -22,7 +22,6 @@
         "php": "^7.1",
         "composer/ca-bundle": "^1.1",
         "guzzlehttp/guzzle": "^6.3",
-        "scrutinizer/ocular": "^1.5",
         "tightenco/collect": "^5.8"
     },
     "require-dev": {
@@ -30,6 +29,7 @@
         "nunomaduro/collision": "^3.0",
         "orchestra/testbench": "^3.8",
         "phpunit/phpunit": "^7.5|^8.0",
+        "scrutinizer/ocular": "^1.5",
         "vlucas/phpdotenv": "^3.3"
     },
     "autoload": {
