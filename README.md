@@ -59,6 +59,7 @@ $feed->reviews->each(function ($review) {
     $review->recommendation;
     $review->hasHeadline();
     $review->headline;
+    $review->hasText();
     $review->text;
     $review->createdAt;
     $review->updatedAt;

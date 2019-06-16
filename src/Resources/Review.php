@@ -102,6 +102,16 @@ class Review extends BaseResource
     }
 
     /**
+     * Determine if the review has a headline.
+     *
+     * @return bool
+     */
+    public function hasText()
+    {
+        return ! empty($this->text);
+    }
+
+    /**
      * Alias "dateSince" to the "created_at" attribute.
      *
      * @param  string  $value

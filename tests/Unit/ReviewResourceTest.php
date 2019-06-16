@@ -102,6 +102,18 @@ class ReviewResourceTest extends TestCase
     }
 
     /** @test */
+    public function it_can_determine_if_it_has_text()
+    {
+        $review = new Review();
+
+        $this->assertFalse($review->hasText());
+
+        $review->text = 'Lorem.';
+
+        $this->assertTrue($review->hasText());
+    }
+
+    /** @test */
     public function converting_to_an_array()
     {
         $review = new Review([
