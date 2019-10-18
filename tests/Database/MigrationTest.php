@@ -2,10 +2,10 @@
 
 namespace Mvdnbrk\Kiyoh\Tests\Database;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Schema;
 use Mvdnbrk\Kiyoh\Kiyoh;
 use Mvdnbrk\Kiyoh\Tests\TestCase;
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class MigrationTest extends TestCase
 {

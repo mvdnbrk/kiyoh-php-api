@@ -2,11 +2,11 @@
 
 namespace Mvdnbrk\Kiyoh\Tests\Console;
 
-use Mvdnbrk\Kiyoh\Client;
 use GuzzleHttp\Psr7\Response;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Mvdnbrk\Kiyoh\Client;
 use Mvdnbrk\Kiyoh\Models\Review;
 use Mvdnbrk\Kiyoh\Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ImportCommandTest extends TestCase
 {

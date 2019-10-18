@@ -3,8 +3,8 @@
 namespace Mvdnbrk\Kiyoh\Resources;
 
 use JsonSerializable;
-use Mvdnbrk\Kiyoh\Contracts\Jsonable;
 use Mvdnbrk\Kiyoh\Contracts\Arrayable;
+use Mvdnbrk\Kiyoh\Contracts\Jsonable;
 use Mvdnbrk\Kiyoh\Exceptions\JsonEncodingException;
 
 abstract class BaseResource implements Arrayable, Jsonable, JsonSerializable
@@ -37,11 +37,11 @@ abstract class BaseResource implements Arrayable, Jsonable, JsonSerializable
     }
 
     /**
-      * Convert the resource instance to an array.
-      * Removes all attributes with null values.
-      *
-      * @return array
-      */
+     * Convert the resource instance to an array.
+     * Removes all attributes with null values.
+     *
+     * @return array
+     */
     public function toArray()
     {
         return collect($this->attributesToArray())
@@ -90,6 +90,7 @@ abstract class BaseResource implements Arrayable, Jsonable, JsonSerializable
     {
         return $this->getAttribute($key);
     }
+
     /**
      * Dynamically set attributes on the resource.
      *

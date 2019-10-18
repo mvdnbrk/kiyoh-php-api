@@ -3,11 +3,11 @@
 namespace Mvdnbrk\Kiyoh\Tests;
 
 use Dotenv\Dotenv;
-use GuzzleHttp\Client as GuzzleClient;
-use Mvdnbrk\Kiyoh\KiyohServiceProvider;
-use Mvdnbrk\Kiyoh\Client as KiyohClient;
 use Dotenv\Exception\InvalidFileException;
 use Dotenv\Exception\InvalidPathException;
+use GuzzleHttp\Client as GuzzleClient;
+use Mvdnbrk\Kiyoh\Client as KiyohClient;
+use Mvdnbrk\Kiyoh\KiyohServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra

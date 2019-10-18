@@ -2,9 +2,9 @@
 
 namespace Mvdnbrk\Kiyoh\Console\Commands;
 
-use Mvdnbrk\Kiyoh\Client;
-use Illuminate\Support\Carbon;
 use Illuminate\Console\Command;
+use Illuminate\Support\Carbon;
+use Mvdnbrk\Kiyoh\Client;
 use Mvdnbrk\Kiyoh\Models\Review;
 
 class ImportCommand extends Command
@@ -60,7 +60,7 @@ class ImportCommand extends Command
 
             $reviews->sortBy('created_at')->each(function ($review) {
                 Review::updateOrCreate([
-                    'review_id' => $review->uuid
+                    'review_id' => $review->uuid,
                 ], [
                     'rating' => $review->rating,
                     'recommendation' => $review->recommendation,

@@ -2,9 +2,9 @@
 
 namespace Mvdnbrk\Kiyoh\Tests\Unit\Resources;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Mvdnbrk\Kiyoh\Models\Review;
 use Mvdnbrk\Kiyoh\Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ReviewModelTest extends TestCase
 {

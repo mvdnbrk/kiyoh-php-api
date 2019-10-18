@@ -2,8 +2,8 @@
 
 namespace Mvdnbrk\Kiyoh\Tests\Unit\Resources;
 
-use Mvdnbrk\Kiyoh\Tests\TestCase;
 use Mvdnbrk\Kiyoh\Resources\Review;
+use Mvdnbrk\Kiyoh\Tests\TestCase;
 
 class ReviewResourceTest extends TestCase
 {
