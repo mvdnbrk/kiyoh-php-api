@@ -33,7 +33,7 @@ class KiyohServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/kiyoh.php', 'kiyoh');
+        $this->mergeConfigFrom(__DIR__.'/../config/kiyoh.php', 'kiyoh');
 
         $this->app->singleton(Client::class, function () {
             return (new Client())->setApiKey(
@@ -43,7 +43,6 @@ class KiyohServiceProvider extends ServiceProvider
 
         $this->app->alias(Client::class, 'kiyoh');
     }
-
 
     /**
      * Register artisan commands.
@@ -80,7 +79,7 @@ class KiyohServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/kiyoh.php' => config_path('kiyoh.php')
+                __DIR__.'/../config/kiyoh.php' => config_path('kiyoh.php'),
             ], 'kiyoh-config');
 
             $this->publishes([

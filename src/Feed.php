@@ -2,10 +2,9 @@
 
 namespace Mvdnbrk\Kiyoh;
 
-use Mvdnbrk\Kiyoh\Client;
-use Mvdnbrk\Kiyoh\Support\Str;
-use Mvdnbrk\Kiyoh\Resources\Review;
 use Mvdnbrk\Kiyoh\Resources\Company;
+use Mvdnbrk\Kiyoh\Resources\Review;
+use Mvdnbrk\Kiyoh\Support\Str;
 use Tightenco\Collect\Support\Collection;
 
 class Feed

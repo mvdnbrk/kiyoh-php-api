@@ -2,8 +2,8 @@
 
 namespace Mvdnbrk\Kiyoh\Tests\Unit\Resources;
 
-use Mvdnbrk\Kiyoh\Tests\TestCase;
 use Mvdnbrk\Kiyoh\Resources\Company;
+use Mvdnbrk\Kiyoh\Tests\TestCase;
 
 class CompanyTest extends TestCase
 {

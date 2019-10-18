@@ -189,10 +189,10 @@ class Review extends BaseResource
     }
 
     /**
-      * Convert this review to an array.
-      *
-      * @return array
-      */
+     * Convert this review to an array.
+     *
+     * @return array
+     */
     public function toArray()
     {
         return collect(parent::toArray())

@@ -2,9 +2,9 @@
 
 namespace Mvdnbrk\Kiyoh\Tests\Unit\Resources;
 
-use Mvdnbrk\Kiyoh\Tests\TestCase;
-use Mvdnbrk\Kiyoh\Resources\BaseResource;
 use Mvdnbrk\Kiyoh\Exceptions\JsonEncodingException;
+use Mvdnbrk\Kiyoh\Resources\BaseResource;
+use Mvdnbrk\Kiyoh\Tests\TestCase;
 
 class BaseResourceTest extends TestCase
 {
@@ -100,7 +100,7 @@ class BaseResourceTest extends TestCase
         $obj->foo = "b\xF8r";
 
         $resource = new ResourceStub([
-            'foo' => $obj
+            'foo' => $obj,
         ]);
 
         $resource->toJson();

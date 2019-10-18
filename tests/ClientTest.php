@@ -2,10 +2,9 @@
 
 namespace Mvdnbrk\Kiyoh\Tests;
 
-use Mvdnbrk\Kiyoh\Feed;
 use GuzzleHttp\Psr7\Response;
-use Psr\Http\Message\ResponseInterface;
 use Mvdnbrk\Kiyoh\Exceptions\KiyohException;
+use Mvdnbrk\Kiyoh\Feed;
 
 class ClientTest extends TestCase
 {
