@@ -54,7 +54,6 @@ $feed = $kiyoh->feed->withMigrated()->get();
 
 ```php
 $feed->reviews->each(function ($review) {
-
     $review->rating;
     $review->recommendation;
     $review->hasHeadline();
@@ -68,7 +67,6 @@ $feed->reviews->each(function ($review) {
     $review->author->name;
     $review->author->hasLocality();
     $review->author->locality;
-
 });
 ```
 
