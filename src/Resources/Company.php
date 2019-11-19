@@ -30,7 +30,7 @@ class Company extends BaseResource
     protected $recommendation_percentage;
 
     /**
-     * Get the average rating attribute,.
+     * Get the average rating attribute.
      *
      * @return float
      */
@@ -60,7 +60,7 @@ class Company extends BaseResource
     }
 
     /**
-     * Get the percentage recommendation attribute.,.
+     * Get the percentage recommendation attribute.
      *
      * @return int
      */
@@ -70,7 +70,7 @@ class Company extends BaseResource
     }
 
     /**
-     * Get the review count attribute,.
+     * Get the review count attribute..
      *
      * @return int
      */
