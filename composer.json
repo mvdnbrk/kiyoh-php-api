@@ -20,8 +20,8 @@
     ],
     "require": {
         "php": "^7.1",
-        "composer/ca-bundle": "^1.1",
-        "guzzlehttp/guzzle": "^6.3",
+        "composer/ca-bundle": "^1.2",
+        "guzzlehttp/guzzle": "^6.4",
         "tightenco/collect": "^5.8"
     },
     "require-dev": {
