@@ -18,6 +18,7 @@ class Author extends BaseResource
      * Create a new Author instance.
      *
      * @param  array  $attributes
+     * @return void
      */
     public function __construct(array $attributes = [])
     {

@@ -48,6 +48,7 @@ class Review extends BaseResource
      * Create a new Review instance.
      *
      * @param  array  $attributes
+     * @return void
      */
     public function __construct(array $attributes = [])
     {

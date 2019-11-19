@@ -44,6 +44,8 @@ class Client
 
     /**
      * Create a new Client instance.
+     *
+     * @return void
      */
     public function __construct(ClientInterface $httpClient = null)
     {
@@ -84,6 +86,7 @@ class Client
      *
      * @param  array  $filters
      * @return object
+     *
      * @throws \Mvdnbrk\Kiyoh\Exceptions\KiyohException
      */
     public function performHttpCall($filters = [])
@@ -136,7 +139,7 @@ class Client
      * Sets the API key.
      *
      * @param  string  $value
-     * @return \Mvdnbrk\Kiyoh\Client
+     * @return $this
      */
     public function setApiKey($value)
     {

@@ -42,6 +42,7 @@ class Feed
      * Create a new Feed instance.
      *
      * @param  \Mvdnbrk\Kiyoh\Client  $client
+     * @return void
      */
     public function __construct(Client $client)
     {
