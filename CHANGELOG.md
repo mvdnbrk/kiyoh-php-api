@@ -4,6 +4,11 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+## [v2.2.2] - 2019-11-19
+
+### Changed
+- Updated version constraints. [`2da949a`](https://github.com/mvdnbrk/kiyoh-php-api/commit/2da949a937999fcedc595775b057f32072a02860), [`883f305`](https://github.com/mvdnbrk/kiyoh-php-api/commit/883f3050cd43ac26ac1bc9984c66ead54c9de642)
+
 ## [v2.2.1] - 2019-06-16
 
 ### Fixed
@@ -98,7 +103,8 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ### Initial realease
 
-[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.2.1...HEAD
+[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.2.2...HEAD
+[v2.2.2]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.2.1...v2.2.2
 [v2.2.1]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.2.0...v2.2.1
 [v2.2.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.1.0...v2.2.0
 [v2.1.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.0.2...v2.1.0
