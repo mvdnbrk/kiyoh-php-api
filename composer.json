@@ -27,10 +27,20 @@
     "require-dev": {
         "nunomaduro/collision": "^3.0",
         "orchestra/testbench": "^3.8",
-        "phpunit/phpunit": "^7.5|^8.0",
+        "phpunit/phpunit": "^7.5 || ^8.0",
         "scrutinizer/ocular": "^1.5",
         "symfony/var-dumper": "^4.3",
         "vlucas/phpdotenv": "^3.3"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mvdnbrk\\Kiyoh\\KiyohServiceProvider"
+            ]
+        }
     },
     "autoload": {
         "psr-4": {
@@ -42,17 +52,7 @@
             "Mvdnbrk\\Kiyoh\\Tests\\": "tests"
         }
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Mvdnbrk\\Kiyoh\\KiyohServiceProvider"
-            ]
-        }
-    },
     "scripts": {
         "test": "vendor/bin/phpunit"
-    },
-    "config": {
-        "sort-packages": true
     }
 }
