@@ -105,10 +105,6 @@ class Client
             throw new KiyohException($e->getMessage(), $e->getCode());
         }
 
-        if (! $response) {
-            throw new KiyohException('No API response received.');
-        }
-
         return $this->parseResponse($response);
     }
 
