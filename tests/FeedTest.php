@@ -100,7 +100,7 @@ class FeedTest extends TestCase
     }
 
     /** @test */
-    public function it_throws_an_exception_when_the_reponse_has_a_malformed_json()
+    public function it_throws_an_exception_when_the_response_has_malformed_json()
     {
         $this->expectException(KiyohException::class);
         $this->expectExceptionMessage("Unable to decode response: '{'malformed': 'json'}'");
