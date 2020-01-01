@@ -91,14 +91,4 @@ class KiyohServiceProvider extends ServiceProvider implements DeferrableProvider
     {
         return Kiyoh::$runsMigrations;
     }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return ['kiyoh'];
-    }
 }
