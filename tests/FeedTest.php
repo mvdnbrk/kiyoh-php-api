@@ -91,15 +91,6 @@ class FeedTest extends TestCase
     }
 
     /** @test */
-    public function it_throws_an_exception_when_no_response_is_received()
-    {
-        $this->expectException(KiyohException::class);
-        $this->expectExceptionMessage('No API response received.');
-
-        $feed = $this->client->feed->get();
-    }
-
-    /** @test */
     public function it_throws_an_exception_when_the_response_has_malformed_json()
     {
         $this->expectException(KiyohException::class);
