@@ -2,18 +2,12 @@
 
 namespace Mvdnbrk\Kiyoh;
 
+use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 use Mvdnbrk\Kiyoh\Console\Commands\ImportCommand;
 
-class KiyohServiceProvider extends ServiceProvider
+class KiyohServiceProvider extends ServiceProvider implements DeferrableProvider
 {
-    /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = true;
-
     /**
      * Boot the service provider.
      *
