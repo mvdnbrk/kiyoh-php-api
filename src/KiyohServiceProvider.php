@@ -59,7 +59,7 @@ class KiyohServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register the migrationsn for this package..
+     * Register the migrationsn for this package.
      *
      * @return void
      */
