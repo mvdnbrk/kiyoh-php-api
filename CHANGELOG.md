@@ -4,6 +4,12 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+## [v2.2.3] - 2020-02-15
+
+### Changed
+- The `KiyohServiceProvider` now implements the `DeferrableProvider`. [`4accf8f`](https://github.com/mvdnbrk/kiyoh-php-api/commit/4accf8f9eff29303a8cf8f5aa64018ed7e55b84b)
+- Updated version constraints. [`2fe822a`](https://github.com/mvdnbrk/kiyoh-php-api/commit/2fe822a06519acfd5bb49e1f5c2b4587552fffac), [`9451bdd`](https://github.com/mvdnbrk/kiyoh-php-api/commit/9451bdd789056417369a00f43a91b74f225f79fa)
+
 ## [v2.2.2] - 2019-11-19
 
 ### Changed
@@ -103,7 +109,8 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ### Initial realease
 
-[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.2.2...HEAD
+[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.2.3...HEAD
+[v2.2.3]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.2.2...v2.2.3
 [v2.2.2]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.2.1...v2.2.2
 [v2.2.1]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.2.0...v2.2.1
 [v2.2.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.1.0...v2.2.0
