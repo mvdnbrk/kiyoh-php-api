@@ -10,7 +10,7 @@ class Review extends BaseResource
     public $uuid;
 
     /**
-     * @var \Mvdnbrk\Kiyoh\Resources;
+     * @var \Mvdnbrk\Kiyoh\Resources\Author
      */
     public $author;
 
