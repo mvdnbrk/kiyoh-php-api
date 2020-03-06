@@ -4,6 +4,12 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+## [v2.3.0] - 2020-03-06
+
+### Added
+- Added support for Guzzle 7. [`619a04c`](https://github.com/mvdnbrk/kiyoh-php-api/commit/619a04c5ec113c44139a81c799143ffb754f84a0)
+- Added support for Laravel 7. [`1beec805`](https://github.com/mvdnbrk/kiyoh-php-api/commit/1beec80569510100f4d93dc2b9bff8e86b946314)
+
 ## [v2.2.3] - 2020-02-15
 
 ### Changed
@@ -98,8 +104,8 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 ## [v1.1.0] - 2019-02-08
 
 ### Added
-- Added `hasPositiveComment()`. [`78f8bcc`](https://github.com/mvdnbrk/kiyoh-php-api/commit/78f8bcca350b2a7d08a651dc2d568c496b792317) 
-- Added `hasNegativeComment()`. [`5f8b77e`](https://github.com/mvdnbrk/kiyoh-php-api/commit/5f8b77eafd51a10d1ae8ba06cd3f6900fb1c80b8) 
+- Added `hasPositiveComment()`. [`78f8bcc`](https://github.com/mvdnbrk/kiyoh-php-api/commit/78f8bcca350b2a7d08a651dc2d568c496b792317)
+- Added `hasNegativeComment()`. [`5f8b77e`](https://github.com/mvdnbrk/kiyoh-php-api/commit/5f8b77eafd51a10d1ae8ba06cd3f6900fb1c80b8)
 
 ### Changed
 - Changed `commentPositive` to `positiveComment`. [`73107cc`](https://github.com/mvdnbrk/kiyoh-php-api/commit/73107cc82c4465fb50f9a794db8fb91748bbe140)
@@ -109,7 +115,8 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ### Initial realease
 
-[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.2.3...HEAD
+[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.3.0...HEAD
+[v2.3.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.2.3...v2.3.0
 [v2.2.3]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.2.2...v2.2.3
 [v2.2.2]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.2.1...v2.2.2
 [v2.2.1]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.2.0...v2.2.1
