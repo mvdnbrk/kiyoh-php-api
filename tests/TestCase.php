@@ -30,11 +30,11 @@ abstract class TestCase extends Orchestra
     protected function setUp(): void
     {
         try {
-            Dotenv::create('./', '.env')->load();
+            (Dotenv::createImmutable(__DIR__.'/..'))->load();
         } catch (InvalidPathException $e) {
             //
         } catch (InvalidFileException $e) {
-            die('The environment file is invalid: '.$e->getMessage());
+            dd('The environment file is invalid');
         }
 
         $this->guzzleClient = $this->createMock(GuzzleClient::class);
