@@ -3,12 +3,13 @@
          backupGlobals="false"
          backupStaticAttributes="false"
          colors="true"
-         verbose="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          processIsolation="false"
-         stopOnFailure="false">
+         stopOnFailure="false"
+         verbose="true"
+>
     <testsuites>
         <testsuite name="KiyOh API Test Suite">
             <directory>tests</directory>
