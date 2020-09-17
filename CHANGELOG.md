@@ -4,6 +4,11 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+## [v2.4.2] - 2020-09-17
+
+### Added
+- Added support for `tightenco/collect` ^8.0 [`c3fbaf5`](https://github.com/mvdnbrk/kiyoh-php-api/commit/c3fbaf5ce15b249337c0d34cef35341ebad8df1a)
+
 ## [v2.4.1] - 2020-06-28
 
 ### Fixed
@@ -128,7 +133,8 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ### Initial realease
 
-[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.4.1...HEAD
+[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.4.2...HEAD
+[v2.4.2]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.4.1...v2.4.2
 [v2.4.1]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.4.0...v2.4.1
 [v2.4.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.3.0...v2.4.0
 [v2.3.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.2.3...v2.3.0
