@@ -112,7 +112,7 @@ To publish the migration file run:
 php artisan vendor:publish --tag=kiyoh-migrations
 ```
 
-If you are not going to use the default migrations, you should call the `Kiyoh::ignoreMigrations()` method in the register method of your `AppServiceProvider`. 
+If you are not going to use the default migrations, you should call the `Kiyoh::ignoreMigrations()` method in the register method of your `AppServiceProvider`.
 
 ## Testing
 
@@ -127,9 +127,9 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
-## Security
+## Security Vulnerabilities
 
-If you discover any security related issues, please email mvdnbrk@gmail.com instead of using the issue tracker.
+Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
 ## Credits
 
