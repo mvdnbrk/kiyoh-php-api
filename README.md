@@ -141,7 +141,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-version]: https://img.shields.io/packagist/v/mvdnbrk/kiyoh-php-api.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/mvdnbrk/kiyoh-php-api.svg?style=flat-square
-[ico-tests]: https://img.shields.io/github/workflow/status/mvdnbrk/kiyoh-php-api/tests/main?label=tests&style=flat-square
+[ico-tests]: https://img.shields.io/github/workflow/status/mvdnbrk/kiyoh-php-api/tests/2.0?label=tests&style=flat-square
 [ico-style-ci]: https://styleci.io/repos/168866337/shield?branch=2.0
 
 [link-packagist]: https://packagist.org/packages/mvdnbrk/kiyoh-php-api
