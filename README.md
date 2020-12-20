@@ -146,7 +146,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/mvdnbrk/kiyoh-php-api.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/mvdnbrk/kiyoh-php-api.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/mvdnbrk/kiyoh-php-api.svg?style=flat-square
-[ico-style-ci]: https://styleci.io/repos/72292364/shield?branch=master
+[ico-style-ci]: https://styleci.io/repos/168866337/shield?branch=2.0
 
 [link-packagist]: https://packagist.org/packages/mvdnbrk/kiyoh-php-api
 [link-travis]: https://travis-ci.org/mvdnbrk/kiyoh-php-api
