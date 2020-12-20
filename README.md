@@ -2,6 +2,7 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
+[![Tests][ico-tests]][link-tests]
 [![StyleCI][ico-style-ci]][link-style-ci]
 [![Total Downloads][ico-downloads]][link-downloads]
 
@@ -140,9 +141,11 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-version]: https://img.shields.io/packagist/v/mvdnbrk/kiyoh-php-api.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/mvdnbrk/kiyoh-php-api.svg?style=flat-square
+[ico-tests]: https://img.shields.io/github/workflow/status/mvdnbrk/kiyoh-php-api/tests/main?label=tests&style=flat-square
 [ico-style-ci]: https://styleci.io/repos/168866337/shield?branch=2.0
 
 [link-packagist]: https://packagist.org/packages/mvdnbrk/kiyoh-php-api
+[link-tests]: https://github.com/mvdnbrk/kiyoh-php-api/actions?query=workflow%3Atests
 [link-downloads]: https://packagist.org/packages/mvdnbrk/kiyoh-php-api
 [link-author]: https://github.com/mvdnbrk
 [link-contributors]: ../../contributors
