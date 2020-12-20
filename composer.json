@@ -24,7 +24,6 @@
         "tightenco/collect": "^5.8 || ^6.0 || ^7.0 || ^8.0"
     },
     "require-dev": {
-        "nunomaduro/collision": "^4.2",
         "orchestra/testbench": "^3.8 || ^4.5 || ^5.0",
         "phpunit/phpunit": "^8.5 || ^9.0",
         "symfony/var-dumper": "^4.3 || ^5.0",
