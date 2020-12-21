@@ -2,7 +2,9 @@
 
 namespace Mvdnbrk\Kiyoh\Exceptions;
 
-class KiyohException extends \Exception
+use Exception;
+
+class KiyohException extends Exception
 {
     /**
      * @param string  $message
