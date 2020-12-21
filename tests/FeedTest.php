@@ -72,6 +72,7 @@ class FeedTest extends TestCase
             $this->assertEquals('Oneliner. Lorem ipsum.', $review->headline);
             $this->assertEquals('Opinion. Lorem ipsum.', $review->text);
             $this->assertSame(10, $review->rating);
+            $this->assertEquals('Comment. Lorem ipsum.', $review->comment);
             $this->assertEquals('John Doe', $review->author->name);
             $this->assertEquals('Amsterdam', $review->author->locality);
             $this->assertEquals('2019-06-03T16:30:24.278Z', $review->created_at);

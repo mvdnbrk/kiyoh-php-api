@@ -16,6 +16,7 @@ class ReviewResourceTest extends TestCase
             'recommendation' => true,
             'headline' => 'Lorem ipsum headline.',
             'text' => 'Lorem ipsum text.',
+            'comment' => 'Lorem ipsum comment.',
             'created_at' => '2019-02-01 12:34:56',
             'updated_at' => '2019-02-02 12:34:56',
             'author' => [
@@ -29,6 +30,7 @@ class ReviewResourceTest extends TestCase
         $this->assertTrue($review->recommendation);
         $this->assertEquals('Lorem ipsum headline.', $review->headline);
         $this->assertEquals('Lorem ipsum text.', $review->text);
+        $this->assertEquals('Lorem ipsum comment.', $review->comment);
         $this->assertEquals('2019-02-01 12:34:56', $review->created_at);
         $this->assertEquals('2019-02-01 12:34:56', $review->createdAt);
         $this->assertEquals('2019-02-02 12:34:56', $review->updated_at);
@@ -114,6 +116,18 @@ class ReviewResourceTest extends TestCase
     }
 
     /** @test */
+    public function it_can_determine_if_it_has_a_comment()
+    {
+        $review = new Review();
+
+        $this->assertFalse($review->hasComment());
+
+        $review->comment = 'Lorem.';
+
+        $this->assertTrue($review->hasComment());
+    }
+
+    /** @test */
     public function converting_to_an_array()
     {
         $review = new Review([
@@ -122,6 +136,7 @@ class ReviewResourceTest extends TestCase
             'recommendation' => true,
             'headline' => 'headline text',
             'text' => 'body text',
+            'comment' => 'comment text',
             'author' => [
                 'name' => 'Mark',
                 'locality' => 'Amsterdam',
@@ -134,6 +149,7 @@ class ReviewResourceTest extends TestCase
             'recommendation' => true,
             'headline' => 'headline text',
             'text' => 'body text',
+            'comment' => 'comment text',
             'author' => [
                 'name' => 'Mark',
                 'locality' => 'Amsterdam',
