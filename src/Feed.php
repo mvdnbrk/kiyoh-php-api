@@ -5,7 +5,7 @@ namespace Mvdnbrk\Kiyoh;
 use Mvdnbrk\Kiyoh\Resources\Company;
 use Mvdnbrk\Kiyoh\Resources\Review;
 use Mvdnbrk\Kiyoh\Support\Str;
-use Tightenco\Collect\Support\Collection;
+use Illuminate\Support\Collection;
 
 class Feed
 {
@@ -34,7 +34,7 @@ class Feed
     public $company;
 
     /**
-     * @var \Tightenco\Collect\Support\Collection
+     * @var \Illuminate\Support\Collection
      */
     public $reviews;
 

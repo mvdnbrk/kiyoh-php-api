@@ -21,7 +21,7 @@ abstract class TestCase extends Orchestra
     protected function setUp(): void
     {
         try {
-            (Dotenv::createImmutable(__DIR__.'/..'))->load();
+            (Dotenv::createUnsafeImmutable(__DIR__.'/..'))->load();
         } catch (InvalidPathException $e) {
             //
         } catch (InvalidFileException $e) {
