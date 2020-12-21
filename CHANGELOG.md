@@ -4,6 +4,12 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+- Replaced `tightenco/collect` with `illuminate/collections`. [`#8`](https://github.com/mvdnbrk/kiyoh-php-api/pull/8)
+
+### Removed
+- Removed support for PHP 7.2.
+
 ## [v2.6.0] - 2020-12-17
 
 ### Added
@@ -143,7 +149,8 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ### Initial realease
 
-[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.6.0...HEAD
+[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.7.0...HEAD
+[v2.7.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.6.0...v2.6.0
 [v2.6.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.5.0...v2.6.0
 [v2.5.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.4.2...v2.5.0
 [v2.4.2]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.4.1...v2.4.2
