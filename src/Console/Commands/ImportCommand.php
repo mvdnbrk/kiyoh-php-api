@@ -20,12 +20,6 @@ class ImportCommand extends Command
     /** @var \Mvdnbrk\Kiyoh\Feed */
     protected $feed;
 
-    /**
-     * Create a new command instance.
-     *
-     * @param  \Mvdnbrk\Kiyoh\Client  $client
-     * @return void
-     */
     public function __construct(Client $client)
     {
         $this->feed = $client->feed;
@@ -33,11 +27,6 @@ class ImportCommand extends Command
         parent::__construct();
     }
 
-    /**
-     * Execute the console command.
-     *
-     * @return mixed
-     */
     public function handle(): int
     {
         $this->feed->withMigrated($this->option('with-migrated'))->limit($this->option('limit'));

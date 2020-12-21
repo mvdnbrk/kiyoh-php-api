@@ -9,21 +9,11 @@ class CreateKiyohReviewsTable extends Migration
     /** @var string */
     protected $table_name;
 
-    /**
-     * Create a new migration instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->table_name = config('kiyoh.table_name');
     }
 
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up(): void
     {
         Schema::create($this->table_name, function (Blueprint $table) {
@@ -36,11 +26,6 @@ class CreateKiyohReviewsTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down(): void
     {
         Schema::dropIfExists($this->table_name);

@@ -15,12 +15,6 @@ class Review extends Model
     /** @var array */
     protected $guarded = [];
 
-    /**
-     * Create a new model instance..
-     *
-     * @param  array  $attributes
-     * @return void
-     */
     public function __construct(array $attributes = [])
     {
         $this->setTable(config('kiyoh.table_name'));
