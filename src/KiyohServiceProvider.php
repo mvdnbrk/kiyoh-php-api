@@ -29,13 +29,11 @@ class KiyohServiceProvider extends ServiceProvider implements DeferrableProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/kiyoh.php', 'kiyoh');
 
-        $this->app->singleton(Client::class, function () {
+        $this->app->singleton('kiyoh', function () {
             return (new Client())->setApiKey(
                 config('kiyoh.secret')
             );
         });
-
-        $this->app->alias(Client::class, 'kiyoh');
     }
 
     /**
@@ -90,15 +88,5 @@ class KiyohServiceProvider extends ServiceProvider implements DeferrableProvider
     protected function shouldMigrate()
     {
         return Kiyoh::$runsMigrations;
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return ['kiyoh'];
     }
 }
