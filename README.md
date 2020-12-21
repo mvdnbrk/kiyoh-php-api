@@ -6,7 +6,7 @@
 [![StyleCI][ico-style-ci]][link-style-ci]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Simple PHP API to fetch your KiyOh reviews from the XML feed.
+Simple PHP API to fetch your KiyOh reviews from the JSON feed.
 
 **For the previous version of the KiyOh feed please use the [1.0 branch](https://github.com/mvdnbrk/kiyoh-php-api/tree/1.0).**
 
