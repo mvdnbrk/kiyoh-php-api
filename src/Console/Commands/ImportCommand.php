@@ -38,7 +38,7 @@ class ImportCommand extends Command
      *
      * @return mixed
      */
-    public function handle()
+    public function handle(): int
     {
         $this->feed->withMigrated($this->option('with-migrated'))->limit($this->option('limit'));
 
@@ -64,6 +64,8 @@ class ImportCommand extends Command
 
             $this->output->progressFinish();
         });
+
+        return 0;
     }
 
     /**
