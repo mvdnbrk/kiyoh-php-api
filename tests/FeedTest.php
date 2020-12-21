@@ -3,9 +3,9 @@
 namespace Mvdnbrk\Kiyoh\Tests;
 
 use GuzzleHttp\Psr7\Response;
+use Illuminate\Support\Collection;
 use Mvdnbrk\Kiyoh\Exceptions\KiyohException;
 use Mvdnbrk\Kiyoh\Feed;
-use Illuminate\Support\Collection;
 
 class FeedTest extends TestCase
 {

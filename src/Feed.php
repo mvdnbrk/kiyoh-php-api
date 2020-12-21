@@ -2,10 +2,10 @@
 
 namespace Mvdnbrk\Kiyoh;
 
+use Illuminate\Support\Collection;
 use Mvdnbrk\Kiyoh\Resources\Company;
 use Mvdnbrk\Kiyoh\Resources\Review;
 use Mvdnbrk\Kiyoh\Support\Str;
-use Illuminate\Support\Collection;
 
 class Feed
 {
