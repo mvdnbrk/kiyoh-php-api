@@ -23,6 +23,9 @@ class Review extends BaseResource
     protected $rating;
 
     /** @var string */
+    public $comment;
+
+    /** @var string */
     public $created_at;
 
     /** @var string */
@@ -87,6 +90,16 @@ class Review extends BaseResource
     }
 
     /**
+     * Determine if the review has a comment.
+     *
+     * @return bool
+     */
+    public function hasComment()
+    {
+        return ! empty($this->comment);
+    }
+
+    /**
      * Determine if the review has a headline.
      *
      * @return bool
@@ -94,6 +107,17 @@ class Review extends BaseResource
     public function hasText()
     {
         return ! empty($this->text);
+    }
+
+    /**
+     * Alias "reviewComments" to the "comment" attribute.
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setReviewCommentsAttribute($value)
+    {
+        $this->comment = $value;
     }
 
     /**

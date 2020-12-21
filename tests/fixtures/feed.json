@@ -47,6 +47,7 @@
                "questionTranslation":"unknown"
             }
          ],
+         "reviewComments": "Comment. Lorem ipsum.",
          "dateSince":"2019-06-03T16:30:24.278Z",
          "updatedSince":"2019-06-03T16:30:24.278Z"
       },
