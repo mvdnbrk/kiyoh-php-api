@@ -12,21 +12,12 @@ use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra
 {
-    /**
-     * @var \Mvdnbrk\Kiyoh\Client
-     */
+    /** @var \Mvdnbrk\Kiyoh\Client */
     protected $client;
 
-    /**
-     * @var \GuzzleHttp\ClientInterface;
-     */
+    /** @var \GuzzleHttp\ClientInterface */
     protected $guzzleClient;
 
-    /**
-     * Setup the test environment.
-     *
-     * @return void
-     */
     protected function setUp(): void
     {
         try {
