@@ -6,11 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateKiyohReviewsTable extends Migration
 {
-    /**
-     * The table name.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $table_name;
 
     /**

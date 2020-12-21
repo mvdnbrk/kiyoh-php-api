@@ -4,14 +4,10 @@ namespace Mvdnbrk\Kiyoh\Resources;
 
 class Author extends BaseResource
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $name;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $locality;
 
     /**

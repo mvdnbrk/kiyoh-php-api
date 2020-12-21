@@ -9,25 +9,15 @@ use Mvdnbrk\Kiyoh\Models\Review;
 
 class ImportCommand extends Command
 {
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $signature = 'kiyoh:import
                             {--limit=10 : The maximum number of reviews to fetch}
                             {--with-migrated : Include migrated reviews in the feed}';
 
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
+    /** @var string */
     protected $description = 'Import KiyOh reviews into the database';
 
-    /**
-     * @var \Mvdnbrk\Kiyoh\Feed
-     */
+    /** @var \Mvdnbrk\Kiyoh\Feed */
     protected $feed;
 
     /**

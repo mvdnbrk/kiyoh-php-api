@@ -6,21 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Review extends Model
 {
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
+    /** @var array */
     protected $casts = [
         'payload' => 'array',
         'recommendation' => 'boolean',
     ];
 
-    /**
-     * The attributes that aren't mass assignable.
-     *
-     * @var array
-     */
+    /** @var array */
     protected $guarded = [];
 
     /**

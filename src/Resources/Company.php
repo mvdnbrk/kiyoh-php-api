@@ -4,29 +4,19 @@ namespace Mvdnbrk\Kiyoh\Resources;
 
 class Company extends BaseResource
 {
-    /**
-     * @var int
-     */
+    /** @var int */
     protected $id;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $name;
 
-    /**
-     * @var float
-     */
+    /** @var float */
     protected $average_rating;
 
-    /**
-     * @var int
-     */
+    /** @var int */
     protected $review_count;
 
-    /**
-     * @var int
-     */
+    /** @var int */
     protected $recommendation_percentage;
 
     /**

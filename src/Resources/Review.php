@@ -4,44 +4,28 @@ namespace Mvdnbrk\Kiyoh\Resources;
 
 class Review extends BaseResource
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     public $uuid;
 
-    /**
-     * @var \Mvdnbrk\Kiyoh\Resources\Author
-     */
+    /** @var \Mvdnbrk\Kiyoh\Resources\Author */
     public $author;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $headline;
 
-    /**
-     * @var bool
-     */
+    /** @var bool */
     protected $recommendation;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $text;
 
-    /**
-     * @var int
-     */
+    /** @var int */
     protected $rating;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $created_at;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     public $updated_at;
 
     /**
