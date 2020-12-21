@@ -13,7 +13,7 @@ class ReviewModelTest extends TestCase
     /** @test */
     public function creating_a_review_model()
     {
-        $review = Review::create([
+        Review::create([
             'review_id' => '1234-aaaa-1234-aaaa',
             'rating' => '10',
             'recommendation' => '1',
