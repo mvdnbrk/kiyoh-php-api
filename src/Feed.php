@@ -2,6 +2,7 @@
 
 namespace Mvdnbrk\Kiyoh;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Mvdnbrk\Kiyoh\Resources\Company;
 use Mvdnbrk\Kiyoh\Resources\Review;
@@ -152,7 +153,7 @@ class Feed
         $attributes = collect($array)->only('reviewContent')->flatten(1)->mapWithKeys(function ($item) {
             if ($key = $this->lookupReviewContentAttribute($item['questionGroup'])) {
                 return [
-                    $key => $item['rating'],
+                    $key => Arr::get($item, 'rating', 0),
                 ];
             }
 
