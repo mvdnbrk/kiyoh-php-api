@@ -4,6 +4,13 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ## [Unreleased]
 
+## [v2.7.1] - 2021-05-28
+
+### Fixed
+- Set rating to `0` if abscent (#15) [`#15`](https://github.com/mvdnbrk/kiyoh-php-api/pull/15)
+
+## [v2.7.0] - 2020-12-21
+
 ### Changed
 - Replaced `tightenco/collect` with `illuminate/collections`. [`#8`](https://github.com/mvdnbrk/kiyoh-php-api/pull/8)
 
@@ -149,8 +156,9 @@ All notable changes to `kiyoh-php-api` will be documented in this file.
 
 ### Initial realease
 
-[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.7.0...HEAD
-[v2.7.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.6.0...v2.6.0
+[Unreleased]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.7.1...HEAD
+[v2.7.1]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.7.0...v2.7.1
+[v2.7.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.6.0...v2.7.0
 [v2.6.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.5.0...v2.6.0
 [v2.5.0]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.4.2...v2.5.0
 [v2.4.2]: https://github.com/mvdnbrk/kiyoh-php-api/compare/v2.4.1...v2.4.2
